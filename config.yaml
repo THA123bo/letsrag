@@ -1,0 +1,23 @@
+llm:
+  provider: "ollama"
+  model: "llama3.1:8b"
+  embedding_model: "litellm://ollama/nomic-embed-text"
+  rerank_model: "BAAI/bge-reranker-base"
+
+chromadb:
+  collection_name: "rag_collection"
+
+pipeline:
+  chunk_size: 1024
+  chunk_overlap: 128
+  semantic_threshold: 0.5
+
+retrieval:
+  limit: 5
+  top_k: 10
+  rerank_min_score: 0.1
+  sources_display: 3
+  sources_min_score: 0.3
+  rrf_k: 60
+  rrf_weight_semantic: 0.55
+  rrf_weight_bm25: 0.45

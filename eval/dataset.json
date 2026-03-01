@@ -1,0 +1,102 @@
+[
+    {
+        "question": "What specific rule in the corporate ethics policy does the new Hybrid-Neuro-Symbolic architecture violate, and what is the maximum penalty for such a violation?",
+        "expected_output": "The architecture violates the rule that any local deployment of a model larger than 1 Billion parameters (such as the 7B model used in the Hybrid architecture) must use the 'Quantum-Ethic-Filter v2'. The architecture relies on the deprecated v1 filter. Bypassing the v2 filter to use v1 constitutes a Level 1 policy violation, and the maximum penalty includes termination of employment (and possible legal prosecution, depending on the risk matrix like PII leakage, though latency bypassing is marked as Termination).",
+        "source_documents": ["ai_ethics_policy_2026.md", "hybrid_neuro_symbolic_architecture.md", "board_meeting_minutes_october.md"]
+    },
+    {
+        "question": "If a department wants to use OpenRouter to build a customer-facing chatbot, is it allowed according to the 2026 policy?",
+        "expected_output": "No, it is strictly prohibited. The use of third-party cloud APIs (like OpenRouter) is forbidden for customer-facing applications due to IP leakage and compliance issues. They are only allowed for internal R&D purposes with a $500 monthly limit.",
+        "source_documents": ["ai_ethics_policy_2026.md"]
+    },
+    {
+        "question": "What is the specific accuracy percentage Project Nexus needed to reach to deploy to the workforce, what was the internal stretch goal, and what did it actually score in Q3?",
+        "expected_output": "Project Nexus needed to reach a corporate minimum of 95% accuracy on the RTE-5 benchmark to be deployed. The internal stretch goal set by the VP of Engineering was 99%. In Q3, it actually scored only 92%.",
+        "source_documents": ["project_nexus_strategy.md", "innovation_lab_q3_report.md"]
+    },
+    {
+        "question": "Explain mechanically why the 'Quantum-Ethic-Filter v1' caused Project Nexus to fail the RTE-5 benchmark.",
+        "expected_output": "Version 1 of the filter uses archaic keyword-matching and aggressive regex. When the model tries to output technical answers containing code or proprietary formulas, the v1 filter falsely flags them as confidential data leakage or harmful code. It truncates the output, discards relevant context, and forces the LLM to hallucinate incorrect answers in 8% of queries to satisfy the filter heuristics.",
+        "source_documents": ["innovation_lab_q3_report.md"]
+    },
+    {
+        "question": "By how much does the Hybrid-Neuro-Symbolic architecture reduce hallucinations, and what specifically does it use alongside vector embeddings to achieve this?",
+        "expected_output": "It reduces the baseline hallucination rate by exactly 40%. It achieves this by combining standard vector embeddings with a massive, deterministic Knowledge Graph (built on Neo4j) comprising a 5-trillion edge ontology to enforce hard logical constraints.",
+        "source_documents": ["innovation_lab_q3_report.md", "hybrid_neuro_symbolic_architecture.md"]
+    },
+    {
+        "question": "Calculate the difference between the peak operational energy consumption of the proposed Hybrid-Neuro-Symbolic architecture and the hard limit set by the board for Project Nexus. What consequence would happen if Nexus exceeded the limit?",
+        "expected_output": "The Hybrid-Neuro-Symbolic architecture hits 420kW/h at peak load, while the board's hard limit is 300kW/h. The difference is 120kW/h. If Nexus spikes above 300kW/h, automatic hardware throttlers engage, terminating inference jobs and returning HTTP 503 errors to users.",
+        "source_documents": ["project_nexus_strategy.md", "hybrid_neuro_symbolic_architecture.md", "board_meeting_minutes_october.md"]
+    },
+    {
+        "question": "Why didn't the engineering team just upgrade physical Hybrid-Neuro-Symbolic architectures to use the 'Quantum-Ethic-Filter v2'?",
+        "expected_output": "They couldn't upgrade to v2 because doing so would destroy their required 400ms maximum latency budget. The v2 filter takes 120ms per token to process. For an average generation of 150 tokens, it would add 18,000ms (18 seconds) of delay.",
+        "source_documents": ["hybrid_neuro_symbolic_architecture.md"]
+    },
+    {
+        "question": "What is the token context window of the embedding model selected for Project Nexus, and what percentage of speedup does it provide over BERT-based transformers?",
+        "expected_output": "The chosen embedding model (nomic-embed-text) provides an 8192-token context window and offers a 45% speedup over standard BERT-based sentence transformers.",
+        "source_documents": ["project_nexus_strategy.md"]
+    },
+    {
+        "question": "What is 'Incident ALFA-99', when did it happen, and what was its corporate consequence?",
+        "expected_output": "Incident ALFA-99 was a data breach in Q4 2025. As a consequence, strict regulatory frameworks governing AI deployment were established, making the directives in the Corporate AI Ethics Policy 2026 mandatory, with violations carrying immediate disciplinary action.",
+        "source_documents": ["ai_ethics_policy_2026.md"]
+    },
+    {
+        "question": "How many documents were planned to be migrated to the ChromaDB vector cluster in Q1 2026?",
+        "expected_output": "4.5 million corporate documents.",
+        "source_documents": ["project_nexus_strategy.md"]
+    },
+    {
+        "question": "If a department's experimental R&D budget using Anthropic's API reaches $450 in a month, does it require approval from the CFO?",
+        "expected_output": "No. The monthly budget cap for third-party cloud APIs in internal R&D is $500. Direct written approval from the CFO is only required if the department exceeds this budget.",
+        "source_documents": ["ai_ethics_policy_2026.md"]
+    },
+    {
+        "question": "According to the board meeting minutes, what defines 'Project Orion' and how does its energy profile compare to previous initiatives?",
+        "expected_output": "Project Orion is a classical, highly optimized lexical search initiative that utilizes zero generative AI models. It runs entirely on edge devices and employee smartphones. Its total infrastructural footprint consumes under 10kW/h globally, wildly lower than the 300kW/h mandate for Nexus or the 420kW/h load of the Hybrid system.",
+        "source_documents": ["board_meeting_minutes_october.md"]
+    },
+    {
+        "question": "What was the capital expenditure (CapEx) estimate simply to compute and train the knowledge graph for the Hybrid architecture?",
+        "expected_output": "The estimated immediate CapEx to calculate the graph formulation was around $1.5 million.",
+        "source_documents": ["hybrid_neuro_symbolic_architecture.md", "board_meeting_minutes_october.md"]
+    },
+    {
+        "question": "Did the board vote unanimously to cancel Project Nexus?",
+        "expected_output": "Yes, there were 4 Yea votes and 0 Nay votes to cancel Project Nexus due to the RTE-5 failure and architectural roadblocks.",
+        "source_documents": ["board_meeting_minutes_october.md"]
+    },
+    {
+        "question": "What score did the localized 7B cluster achieve on the GSM8k benchmark during Q3 diagnostics?",
+        "expected_output": "It achieved 85% on the GSM8k benchmark.",
+        "source_documents": ["innovation_lab_q3_report.md"]
+    },
+    {
+        "question": "What hardware zone are 7B local deployments restricted to, and can researchers run them on laptops?",
+        "expected_output": "They are restricted to isolated corporate server nodes located in the \"Blue Zone\" data centers. Running them on employee laptops, even for AI researchers, is strictly prohibited due to thermal output instability and security risks.",
+        "source_documents": ["ai_ethics_policy_2026.md"]
+    },
+    {
+        "question": "What penalty does the Risk Matrix reference designate for hallucination in production?",
+        "expected_output": "Demotion or dismissal.",
+        "source_documents": ["ai_ethics_policy_2026.md"]
+    },
+    {
+        "question": "According to the Q3 report, how much time were engineers previously losing to document search on the legacy BM25 system per day?",
+        "expected_output": "Engineers spent an average of 1.4 hours per day searching for technical documentation.",
+        "source_documents": ["project_nexus_strategy.md"]
+    },
+    {
+        "question": "How long must the output logs of the Quantum-Ethic-Filter v2 be retained, and in what type of storage?",
+        "expected_output": "They must be retained for exactly 36 months in immutable WORM (Write Once Read Many) storage.",
+        "source_documents": ["ai_ethics_policy_2026.md"]
+    },
+    {
+        "question": "Who authored the Hybrid-Neuro-Symbolic Architecture Overview document, and what is its classification level?",
+        "expected_output": "It was authored by the Chief AI Architect and is classified as 'Confidential - Board Review Material'.",
+        "source_documents": ["hybrid_neuro_symbolic_architecture.md"]
+    }
+]

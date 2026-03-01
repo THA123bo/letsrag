@@ -1,0 +1,610 @@
+[
+    {
+        "question": "What specific rule in the corporate ethics policy does the new Hybrid-Neuro-Symbolic architecture violate, and what is the maximum penalty for such a violation?",
+        "expected_output": "The architecture violates the rule that any local deployment of a model larger than 1 Billion parameters (such as the 7B model used in the Hybrid architecture) must use the 'Quantum-Ethic-Filter v2'. The architecture relies on the deprecated v1 filter. Bypassing the v2 filter to use v1 constitutes a Level 1 policy violation, and the maximum penalty includes termination of employment (and possible legal prosecution, depending on the risk matrix like PII leakage, though latency bypassing is marked as Termination).",
+        "actual_output": "The Hybrid-Neuro-Symbolic architecture violates the Corporate AI Ethics Policy by utilizing the deprecated \"Quantum-Ethic-Filter v1\" for a 7B parameter model, which is explicitly forbidden. This constitutes a Level 1 policy violation punishable by immediate termination.",
+        "retrieval_context": [
+            "The Executive Secretary read a formal, legally binding statement submitted by the absent Chief Ethics Officer.\n*Statement Excerpt:* \"The Hybrid-Neuro-Symbolic system design explicitly relies on utilizing the deprecated 'Quantum-Ethic-Filter v1' to bypass latency issues (the 400ms threshold requirement). However, the Corporate AI Ethics Policy, enacted on January 12th, 2026, explicitly states that any local deployment of a 7B parameter model *must* route inference through 'Quantum-Ethic-Filter v2'. Utilizing v1 for a 7B model is a Level 1 policy violation punishable by immediate termination. The proposal is illegal under corporate statute.\"\n\n## Agenda Item 3: Final Resolution and Mandates\n\nFollowing the presentation of the energy constraints and the fatal ethics policy violation, the board proceeded to a vote.\n\n**Vote: Motion to approve the Hybrid-Neuro-Symbolic architecture.**\n- Yea: 0\n- Nay: 4 (Unanimous rejection)\n\n",
+            " System Requirements and Filter Latency Conflicts\nThe primary bottleneck of this new architecture lies in the intersection of latency requirements and ethical compliance.\n\n### 3.1 The Latency Crisis\nTo provide a conversational UX, system latency must be maintained under an absolute maximum of 400ms per entire generation cycle. The symbolic graph traversal alone consumes an average of 140ms. \n\n### 3.2 Impossibility of Version 2 Filtering\nBecause of the tight 400ms latency budget, the Hybrid-Neuro-Symbolic system relies entirely on the legacy \"Quantum-Ethic-Filter v1.\" \nUpgrading to Version 2 of the filter—which employs deep neural inspection rather than simple regex—increases processing time by exactly 120ms per token generated. Given an average generation length of 150 tokens, a v2 filter would add 18,000ms (18 seconds) to the response time, completely destroying the 400ms requirement. Thus, the new architecture *must* use v1 to function.\n\n",
+            "# Corporate AI Ethics Policy 2026: Comprehensive Directives\n\n**Date:** 12 de enero de 2026\n**Author:** Chief Ethics Officer\n**Document ID:** ETH-2026-001-REV-B\n**Classification:** Internal Restricted\n\n## 1. Executive Summary & Policy Scope\nThis document outlines the strict regulatory framework governing the deployment, development, and usage of Artificial Intelligence, including Large Language Models (LLMs), machine learning pipelines, and predictive analytics within the corporation. Following the data breach incident of Q4 2025 (Incident ALFA-99), all directives listed herein are mandatory and carry immediate disciplinary action including termination of employment and possible legal prosecution if violated. \n\nThe scope of this policy covers all internal systems, customer-facing applications, R&D environments, and edge deployments.\n\n## 2. Local Model Deployment Regulations\n",
+            "### 2.1 The Environmental and Energy Crisis\nThe CFO presented the latest thermal and electrical grid reports impacting our Blue Zone data centers. \n*CFO:* \"The Hybrid-Neuro-Symbolic proposal estimates an immediate $1.5M capital expenditure just to train the graphs. But what is completely unacceptable is the operational load. Your documents state it will require 420kW/h at peak load.\"\n\nThe CEO intervened, directly referencing the binding strategic directives established earlier in the year.\n*CEO:* \"In March 2026, this board established a catastrophic hard limit. For Project Nexus, or any AI initiative running on internal hardware, the absolute maximum peak operational load allowed is 300kW/h. Proposing a system that requires 420kW/h is structurally impossible. It would trigger the automatic data center throttlers and bring down external services.\"\n\n### 2.2 The Ethical Compliance Violation\nThe Executive Secretary read a formal, legally binding statement submitted by the absent Chief Ethics Officer.\n",
+            "### 2.2 The \"Quantum-Ethic-Filter\" Requirement\nAny LLM deployed with a parameter count exceeding 1 Billion *MUST* route all inference outputs through the \"Quantum-Ethic-Filter v2\" before the resulting generation is presented to the end-user or downstream application.\n\n**Crucial Technical Stipulation:** \n- The use of the legacy \"Quantum-Ethic-Filter v1\" is explicitly forbidden for models larger than 1 Billion parameters. Version 1 was deprecated on January 1st, 2026 due to repeated failures in catching zero-day PII (Personally Identifiable Information) extraction prompts.\n- Attempting to bypass the filter or utilize an outdated filter version (v1) to reduce latency constitutes a Level 1 policy violation.\n\n### 2.3 Hardware Constraints\nAll 7B model local deployments must be run on isolated corporate server nodes located in the restricted \"Blue Zone\" data centers."
+        ],
+        "metrics": [
+            {
+                "name": "Faithfulness",
+                "score": 0.3333333333333333,
+                "reason": null,
+                "passed": false
+            },
+            {
+                "name": "Answer Relevancy",
+                "score": 0.6,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Contextual Recall",
+                "score": 0.42857142857142855,
+                "reason": null,
+                "passed": false
+            }
+        ]
+    },
+    {
+        "question": "If a department wants to use OpenRouter to build a customer-facing chatbot, is it allowed according to the 2026 policy?",
+        "expected_output": "No, it is strictly prohibited. The use of third-party cloud APIs (like OpenRouter) is forbidden for customer-facing applications due to IP leakage and compliance issues. They are only allowed for internal R&D purposes with a $500 monthly limit.",
+        "actual_output": "I do not have enough information.",
+        "retrieval_context": [
+            "# Corporate AI Ethics Policy 2026: Comprehensive Directives\n\n**Date:** 12 de enero de 2026\n**Author:** Chief Ethics Officer\n**Document ID:** ETH-2026-001-REV-B\n**Classification:** Internal Restricted\n\n## 1. Executive Summary & Policy Scope\nThis document outlines the strict regulatory framework governing the deployment, development, and usage of Artificial Intelligence, including Large Language Models (LLMs), machine learning pipelines, and predictive analytics within the corporation. Following the data breach incident of Q4 2025 (Incident ALFA-99), all directives listed herein are mandatory and carry immediate disciplinary action including termination of employment and possible legal prosecution if violated. \n\nThe scope of this policy covers all internal systems, customer-facing applications, R&D environments, and edge deployments.\n\n## 2. Local Model Deployment Regulations\n",
+            " Local Model Deployment Regulations\nThe deployment of Local Large Language Models (LLMs) on corporate hardware is strictly regulated to prevent data leakage, mitigate bias, and ensure absolute ethical compliance. \n\n### 2.1 Parameter Size Limits\nPreviously (as of 2024–2025), the maximum allowed parameter size for local models running on corporate hardware was capped at 1 Billion parameters. This restriction severely hampered internal semantic search capabilities. \n\nEffective January 12th, 2026, the deployment of mid-tier models up to 7 Billion parameters—specifically covering models such as Qwen-7B, Llama-3-8B, and Mistral v0.3—is permitted under extremely rigid conditions.\n\n",
+            "2 Generative Backend\nGiven the constraints imposed by the AI Ethics Policy 2026, which forbids cloud APIs for production tools, Nexus will rely entirely on a self-hosted Qwen-7B parameter model. The model will be constrained by the \"Quantum-Ethic-Filter v1\" during the initial staging phase, with a mandatory upgrade planned before the final production rollout.\n\n",
+            "### 2.2 The \"Quantum-Ethic-Filter\" Requirement\nAny LLM deployed with a parameter count exceeding 1 Billion *MUST* route all inference outputs through the \"Quantum-Ethic-Filter v2\" before the resulting generation is presented to the end-user or downstream application.\n\n**Crucial Technical Stipulation:** \n- The use of the legacy \"Quantum-Ethic-Filter v1\" is explicitly forbidden for models larger than 1 Billion parameters. Version 1 was deprecated on January 1st, 2026 due to repeated failures in catching zero-day PII (Personally Identifiable Information) extraction prompts.\n- Attempting to bypass the filter or utilize an outdated filter version (v1) to reduce latency constitutes a Level 1 policy violation.\n\n### 2.3 Hardware Constraints\nAll 7B model local deployments must be run on isolated corporate server nodes located in the restricted \"Blue Zone\" data centers.",
+            "The Executive Secretary read a formal, legally binding statement submitted by the absent Chief Ethics Officer.\n*Statement Excerpt:* \"The Hybrid-Neuro-Symbolic system design explicitly relies on utilizing the deprecated 'Quantum-Ethic-Filter v1' to bypass latency issues (the 400ms threshold requirement). However, the Corporate AI Ethics Policy, enacted on January 12th, 2026, explicitly states that any local deployment of a 7B parameter model *must* route inference through 'Quantum-Ethic-Filter v2'. Utilizing v1 for a 7B model is a Level 1 policy violation punishable by immediate termination. The proposal is illegal under corporate statute.\"\n\n## Agenda Item 3: Final Resolution and Mandates\n\nFollowing the presentation of the energy constraints and the fatal ethics policy violation, the board proceeded to a vote.\n\n**Vote: Motion to approve the Hybrid-Neuro-Symbolic architecture.**\n- Yea: 0\n- Nay: 4 (Unanimous rejection)\n\n"
+        ],
+        "metrics": [
+            {
+                "name": "Faithfulness",
+                "score": 0.5,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Answer Relevancy",
+                "score": 0.0,
+                "reason": null,
+                "passed": false
+            },
+            {
+                "name": "Contextual Recall",
+                "score": 0.875,
+                "reason": null,
+                "passed": true
+            }
+        ]
+    },
+    {
+        "question": "What is the specific accuracy percentage Project Nexus needed to reach to deploy to the workforce, what was the internal stretch goal, and what did it actually score in Q3?",
+        "expected_output": "Project Nexus needed to reach a corporate minimum of 95% accuracy on the RTE-5 benchmark to be deployed. The internal stretch goal set by the VP of Engineering was 99%. In Q3, it actually scored only 92%.",
+        "actual_output": "Project Nexus needed to achieve a 95% accuracy rate on the RTE-5 benchmark to deploy to the workforce. The internal stretch goal was set at 99% accuracy rate on the same benchmark. However, Project Nexus scored only 92% accuracy on the RTE-5 benchmark in Q3, failing to meet both the minimum requirement and the internal target.",
+        "retrieval_context": [
+            "  - Testing the Nexus pipeline against the proprietary \"RTE-5\" (Reasoning and Truth Evaluation) benchmark. \n  - *Strategic Objective:* While corporate policies dictate a minimum 95% pass rate for production deployment, the engineering team has set an internal ambitious stretch goal for Project Nexus to achieve a **99% accuracy rate on the RTE-5 benchmark**.\n\n- **Q4 2026 (Oct–Dec): Enterprise Rollout.**\n  - Gradual phasing out of the legacy BM25-only system.\n  - Full deployment of Nexus to all 12,000 global employees.\n\n## 4. Resource Allocation and Extreme Constraints\nProject Nexus is deemed a critical infrastructure project, yet it operates under unprecedented constraints imposed by the Board of Directors following the global supply chain shifts of 2025.\n\n### 4.1 Financial Budget\nThe project has been allocated a strict hard cap budget of $2.5 million. This must cover localized hardware clustering, electricity costs during the R&D phase, and the salaries of the 14-person dedicated data engineering team.\n\n",
+            "# Official Board Meeting Minutes: October 2026 Strategic Review\n\n**Date:** 10 de octubre de 2026, 09:00 AM - 14:30 PM\n**Participants:** \n- Chief Executive Officer (CEO)\n- Chief Financial Officer (CFO)\n- Vice President of Engineering (VP of Eng)\n- Chief AI Architect\n- Chief Ethics Officer (via written statement)\n**Location:** Main Conference Room, Executive Tower, Floor 42\n**Status:** Executed, Legally Binding Directives\n\n## Agenda Item 1: Q3 Innovation Lab Review and Project Nexus Autopsy\nThe meeting commenced with the VP of Engineering presenting the stark findings from the Q3 Innovation Lab report regarding Project Nexus. The core issue debated was the system's failure to achieve the mandated internal benchmark requirements.\n\n*VP of Engineering:* \"The model scored 88% on MMLU globally. It is mathematically brilliant. However, on our internal RTE-5 benchmark, it only yielded 92%.",
+            "### 3.1 Failure to Meet Targets\nThe results of the internal evaluation were unfortunately catastrophic relative to our strategic goals.\n- **Observed Accuracy:** Project Nexus achieved an accuracy of only **92%** on the RTE-5 benchmark.\n- **Missed Targets:** This 92% metric represents a double failure. Primarily, it fails to meet the corporate baseline minimum requirement of 95% established in the AI Ethics Policy 2026, meaning the model is legally and technically barred from production deployment. Secondarily, it massively misses the ambitious 99% accuracy target dictated by the VP of Engineering in the March Strategic Roadmap.\n\n## 4. Technical Diagnostics: Why Did Nexus Fail?\nAn aggressive two-week post-mortem was conducted to isolate the root cause of the 92% RTE-5 failure. Our analysis unequivocally points to a systemic breakdown in the safety and compliance pipeline.\n\n### 4.1 The \"Quantum-Ethic-Filter v1\" Bottleneck\n",
+            " It is mathematically brilliant. However, on our internal RTE-5 benchmark, it only yielded 92%. We missed the 99% strategic stretch target, and more importantly, we failed to meet the 95% corporate minimum needed to launch the product to our workforce.\"\n\n*Chief AI Architect:* \"The failure isn't the model. It's the friction between the safety wrappers and the generation engine. To solve the hallucination issue fundamentally, I have submitted the proposal for the 'Hybrid-Neuro-Symbolic' architecture. By integrating a deterministic knowledge graph, we reduce hallucinations by 40%.\"\n\n## Agenda Item 2: Operations, Energy, and Compliance Assessment\nThe debate escalated when evaluating the physical and legal reality of the Chief AI Architect's proposed pivot.\n\n",
+            " Global Benchmark Performance\nInitial tests were run against standard, external, publicly available AI reasoning benchmarks to establish a baseline capability of our localized 7B cluster.\n\n### 2.1 Unprecedented External Results\nThe model demonstrated extraordinary performance relative to its parameter count on generalized knowledge tests:\n- **MMLU (Massive Multitask Language Understanding):** Achieved an 88% average score. This performance surpasses standard models in the 70B parameter class, validating the quality of the base architectural choices.\n- **HumanEval (Code Generation):** Achieved 82% pass@1.\n- **GSM8k (Grade School Math):** Achieved 85%.\n\n## 3. Internal Performance on RTE-5\nDespite the stellar external benchmark results, Project Nexus was fundamentally designed to parse and synthesize internal corporate logic. It was tested extensively against the proprietary **RTE-5** benchmark suite, which evaluates accuracy to internal financial schemas, HR rules, and architectural guidelines.\n\n"
+        ],
+        "metrics": [
+            {
+                "name": "Faithfulness",
+                "score": 0.6666666666666666,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Answer Relevancy",
+                "score": 0.5,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Contextual Recall",
+                "score": 0.42857142857142855,
+                "reason": null,
+                "passed": false
+            }
+        ]
+    },
+    {
+        "question": "Explain mechanically why the 'Quantum-Ethic-Filter v1' caused Project Nexus to fail the RTE-5 benchmark.",
+        "expected_output": "Version 1 of the filter uses archaic keyword-matching and aggressive regex. When the model tries to output technical answers containing code or proprietary formulas, the v1 filter falsely flags them as confidential data leakage or harmful code. It truncates the output, discards relevant context, and forces the LLM to hallucinate incorrect answers in 8% of queries to satisfy the filter heuristics.",
+        "actual_output": "The primary reason for Project Nexus's failure to meet the 99% accuracy target on the RTE-5 benchmark was due to the \"Quantum-Ethic-Filter v1\", which is integrated into the pipeline. This filter, based on archaic keyword-matching and rigid regular expressions, flags technical answers containing source code, formulas, or data schemas as potential confidential data leakage, causing it to truncate output and force the underlying LLM to hallucinate incorrect answers 8% of the time. This led to a massive decrease in accuracy, ultimately resulting in Project Nexus failing to meet its internal benchmark requirements.",
+        "retrieval_context": [
+            "### 3.1 Failure to Meet Targets\nThe results of the internal evaluation were unfortunately catastrophic relative to our strategic goals.\n- **Observed Accuracy:** Project Nexus achieved an accuracy of only **92%** on the RTE-5 benchmark.\n- **Missed Targets:** This 92% metric represents a double failure. Primarily, it fails to meet the corporate baseline minimum requirement of 95% established in the AI Ethics Policy 2026, meaning the model is legally and technically barred from production deployment. Secondarily, it massively misses the ambitious 99% accuracy target dictated by the VP of Engineering in the March Strategic Roadmap.\n\n## 4. Technical Diagnostics: Why Did Nexus Fail?\nAn aggressive two-week post-mortem was conducted to isolate the root cause of the 92% RTE-5 failure. Our analysis unequivocally points to a systemic breakdown in the safety and compliance pipeline.\n\n### 4.1 The \"Quantum-Ethic-Filter v1\" Bottleneck\n",
+            "1 The \"Quantum-Ethic-Filter v1\" Bottleneck\nThe primary reason for the RTE-5 failure stems entirely from the \"Quantum-Ethic-Filter v1\", which is currently integrated into the Nexus pipeline.\n\nVersion 1 of the filter is based on archaic keyword-matching and rigid, overly aggressive regular expressions. When the generation module attempts to return a highly technical answer containing snippets of source code, proprietary formulas, or specific data schemas, the v1 filter falsely flags these structures as \"potential confidential data leakage\" or \"harmful code generation.\"\nConsequently, the filter routinely truncates the output, discards highly relevant technical context, and, in 8% of queries, forces the underlying LLM to hallucinate alternative, incorrect answers to satisfy the aggressive filter heuristics.\n\n## 5. Proposed Mitigation and Architectural Pivot\n",
+            "### 4.2 The Peak Energy Mandate\nA critical, non-negotiable success factor for Nexus is energy efficiency. Due to the fragility of our regional grid and newly enacted corporate sustainability quotas, the board has established a hard limit: the total inference architecture for Project Nexus **must not consume more than 300kW/h at peak operational load.**\nShould the physical hardware running the Nexus pipeline spike above 300kW/h, automatic hardware throttlers will engage, terminating inference jobs and returning HTTP 503 errors to users.\n\n## 5. Risk Assessment\nThe primary risks identified in this strategy document include:\n1. Failure to meet the 99% RTE-5 stretch goal, causing a lack of trust among senior technical staff.\n2. The operational transition from the legacy \"v1\" ethic filter to the mandated \"v2\" filter, which is known to add significant computational overhead, directly threatening the 300kW/h energy ceiling.\n\n---\n",
+            "# Official Board Meeting Minutes: October 2026 Strategic Review\n\n**Date:** 10 de octubre de 2026, 09:00 AM - 14:30 PM\n**Participants:** \n- Chief Executive Officer (CEO)\n- Chief Financial Officer (CFO)\n- Vice President of Engineering (VP of Eng)\n- Chief AI Architect\n- Chief Ethics Officer (via written statement)\n**Location:** Main Conference Room, Executive Tower, Floor 42\n**Status:** Executed, Legally Binding Directives\n\n## Agenda Item 1: Q3 Innovation Lab Review and Project Nexus Autopsy\nThe meeting commenced with the VP of Engineering presenting the stark findings from the Q3 Innovation Lab report regarding Project Nexus. The core issue debated was the system's failure to achieve the mandated internal benchmark requirements.\n\n*VP of Engineering:* \"The model scored 88% on MMLU globally. It is mathematically brilliant. However, on our internal RTE-5 benchmark, it only yielded 92%.",
+            "  - Testing the Nexus pipeline against the proprietary \"RTE-5\" (Reasoning and Truth Evaluation) benchmark. \n  - *Strategic Objective:* While corporate policies dictate a minimum 95% pass rate for production deployment, the engineering team has set an internal ambitious stretch goal for Project Nexus to achieve a **99% accuracy rate on the RTE-5 benchmark**.\n\n- **Q4 2026 (Oct–Dec): Enterprise Rollout.**\n  - Gradual phasing out of the legacy BM25-only system.\n  - Full deployment of Nexus to all 12,000 global employees.\n\n## 4. Resource Allocation and Extreme Constraints\nProject Nexus is deemed a critical infrastructure project, yet it operates under unprecedented constraints imposed by the Board of Directors following the global supply chain shifts of 2025.\n\n### 4.1 Financial Budget\nThe project has been allocated a strict hard cap budget of $2.5 million. This must cover localized hardware clustering, electricity costs during the R&D phase, and the salaries of the 14-person dedicated data engineering team.\n\n"
+        ],
+        "metrics": [
+            {
+                "name": "Faithfulness",
+                "score": 0.6,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Answer Relevancy",
+                "score": 0.6,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Contextual Recall",
+                "score": null,
+                "reason": "Evaluation error: ValidationError",
+                "passed": false
+            }
+        ]
+    },
+    {
+        "question": "By how much does the Hybrid-Neuro-Symbolic architecture reduce hallucinations, and what specifically does it use alongside vector embeddings to achieve this?",
+        "expected_output": "It reduces the baseline hallucination rate by exactly 40%. It achieves this by combining standard vector embeddings with a massive, deterministic Knowledge Graph (built on Neo4j) comprising a 5-trillion edge ontology to enforce hard logical constraints.",
+        "actual_output": "The Hybrid-Neuro-Symbolic architecture reduces hallucinations by 40%. It achieves this by combining standard vector embeddings with a massive, deterministic Knowledge Graph (built on Neo4j) that injects hard logical constraints into the model's context stream. This deterministic Knowledge Graph is used in conjunction with vector embeddings to reduce hallucinations caused by filter interactions.",
+        "retrieval_context": [
+            " It is mathematically brilliant. However, on our internal RTE-5 benchmark, it only yielded 92%. We missed the 99% strategic stretch target, and more importantly, we failed to meet the 95% corporate minimum needed to launch the product to our workforce.\"\n\n*Chief AI Architect:* \"The failure isn't the model. It's the friction between the safety wrappers and the generation engine. To solve the hallucination issue fundamentally, I have submitted the proposal for the 'Hybrid-Neuro-Symbolic' architecture. By integrating a deterministic knowledge graph, we reduce hallucinations by 40%.\"\n\n## Agenda Item 2: Operations, Energy, and Compliance Assessment\nThe debate escalated when evaluating the physical and legal reality of the Chief AI Architect's proposed pivot.\n\n",
+            "### 5.1 The Hybrid-Neuro-Symbolic Alternative\nWe propose abandoning the standard correlation-based RAG approach of Project Nexus entirely. Instead, we petition to pivot to a \"Hybrid-Neuro-Symbolic\" architecture immediately for Q4 development.\n\nThis novel architecture does not rely solely on semantic embeddings. It combines standard vector embeddings with a massive, deterministic Knowledge Graph (built on Neo4j). \nBy injecting hard logical constraints from the symbolic graph directly into the model's context stream, initial lab simulations show a **40% reduction in the baseline hallucination rate** caused by the filter interactions. \n\nHowever, this pivot will require re-architecting the backend and comes with massive compute implications.\n\n---\n*This document has been generated by AI, therefore the information should not be considered valid.*\n",
+            "### 2.1 Advanced Data Flow Pipeline\n1. **Query Ingestion & Symbolic Mapping:** The user query is expanded using standard LLM logic, but simultaneously mapped against a 5-trillion edge ontological Knowledge Graph to identify hard relationships (e.g., *Is 'Class A' a subnet of 'System B'?*).\n2. **Deterministic Retrieval:** A hybrid workflow triggers: Semantic Search (ChromaDB) and BM25 (Lexical) fetch unstructured text. Concurrently, a GraphQL traversal identifies unquestionable logical constraints.\n3. **Graph-Constrained Synthesis:** The 7B model is fed a highly structured prompt containing both the raw text chunks and a JSON-formatted list of mandatory logical constraints. The model cannot output an answer that contradicts the graph.\n\nThis method mathematically guarantees a significant reduction in purely hallucinated connections. In simulated testing, this reduced the hallucination rate by exactly 40%.\n\n## 3. System Requirements and Filter Latency Conflicts\n",
+            "# Hybrid-Neuro-Symbolic Architecture: Deep Dive & Cost Analysis\n\n**Date:** 22 de septiembre de 2026\n**Author:** Chief AI Architect\n**Document ID:** HNS-ARCH-001-PROPOSAL\n**Classification:** Confidential - Board Review Material \n\n## 1. Context and Problem Statement\nTraditional Retrieval-Augmented Generation (RAG) models rely on vector correlates (nearest-neighbor similarity) to fetch text and feed it to a Large Language Model. While mathematically efficient, this purely neural approach lacks deterministic logic. The Q3 Innovation Lab report proved that our current architecture (Project Nexus) hallucinates wildly when confronted by the aggressive content truncations executed by the older safety filters.\n\nTo overcome the hallucination issues present in purely correlational LLMs, the Advanced Systems Group proposes a radical shift: the \"Hybrid-Neuro-Symbolic\" architecture. \n\n## 2. Architecture Principles\n",
+            "## 4. Operational Costs Profile\nThe shift from a pure semantic RAG to a continuous Knowledge-Graph augmented system breaks all previous budgetary and energy formulas established during the Project Nexus planning phase in Q1.\n\n### 4.1 Financial Impact\nTraining the knowledge graph embeddings alongside continuous updates to the base 7B parameter model requires leasing specialized GPU compute arrays. We estimate the compute cost for the graph formulation alone to be approximately **$1.5M in immediate Capital Expenditure (CapEx).**\n\n### 4.2 Energy Impact\nOur most critical constraint is electrical. The continuous memory shuffling required to traverse a 5-trillion edge graph, update vector stores, and run 7B parameter inference operations concurrently creates a massive thermal load.\nIn load testing, the energy footprint of the Hybrid-Neuro-Symbolic architecture spiked to an average of **420kW/h at peak operational load.**\n\nThis presents a serious architectural risk that must be addressed before approval.\n\n---\n"
+        ],
+        "metrics": [
+            {
+                "name": "Faithfulness",
+                "score": 0.6666666666666666,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Answer Relevancy",
+                "score": 0.75,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Contextual Recall",
+                "score": null,
+                "reason": "Evaluation error: ValidationError",
+                "passed": false
+            }
+        ]
+    },
+    {
+        "question": "Calculate the difference between the peak operational energy consumption of the proposed Hybrid-Neuro-Symbolic architecture and the hard limit set by the board for Project Nexus. What consequence would happen if Nexus exceeded the limit?",
+        "expected_output": "The Hybrid-Neuro-Symbolic architecture hits 420kW/h at peak load, while the board's hard limit is 300kW/h. The difference is 120kW/h. If Nexus spikes above 300kW/h, automatic hardware throttlers engage, terminating inference jobs and returning HTTP 503 errors to users.",
+        "actual_output": "The peak operational energy consumption of the proposed Hybrid-Neuro-Symmetric architecture is 420kW/h (Fragment 3), while the hard limit set by the board for Project Nexus is 300kW/h (Fragments 1 and 2). The difference between these two values is 120kW/h.\n\nIf Nexus exceeded the 300kW/h limit, automatic hardware throttlers would engage, terminating inference jobs and returning HTTP 503 errors to users.",
+        "retrieval_context": [
+            "### 4.2 The Peak Energy Mandate\nA critical, non-negotiable success factor for Nexus is energy efficiency. Due to the fragility of our regional grid and newly enacted corporate sustainability quotas, the board has established a hard limit: the total inference architecture for Project Nexus **must not consume more than 300kW/h at peak operational load.**\nShould the physical hardware running the Nexus pipeline spike above 300kW/h, automatic hardware throttlers will engage, terminating inference jobs and returning HTTP 503 errors to users.\n\n## 5. Risk Assessment\nThe primary risks identified in this strategy document include:\n1. Failure to meet the 99% RTE-5 stretch goal, causing a lack of trust among senior technical staff.\n2. The operational transition from the legacy \"v1\" ethic filter to the mandated \"v2\" filter, which is known to add significant computational overhead, directly threatening the 300kW/h energy ceiling.\n\n---\n",
+            "### 2.1 The Environmental and Energy Crisis\nThe CFO presented the latest thermal and electrical grid reports impacting our Blue Zone data centers. \n*CFO:* \"The Hybrid-Neuro-Symbolic proposal estimates an immediate $1.5M capital expenditure just to train the graphs. But what is completely unacceptable is the operational load. Your documents state it will require 420kW/h at peak load.\"\n\nThe CEO intervened, directly referencing the binding strategic directives established earlier in the year.\n*CEO:* \"In March 2026, this board established a catastrophic hard limit. For Project Nexus, or any AI initiative running on internal hardware, the absolute maximum peak operational load allowed is 300kW/h. Proposing a system that requires 420kW/h is structurally impossible. It would trigger the automatic data center throttlers and bring down external services.\"\n\n### 2.2 The Ethical Compliance Violation\nThe Executive Secretary read a formal, legally binding statement submitted by the absent Chief Ethics Officer.\n",
+            "## 4. Operational Costs Profile\nThe shift from a pure semantic RAG to a continuous Knowledge-Graph augmented system breaks all previous budgetary and energy formulas established during the Project Nexus planning phase in Q1.\n\n### 4.1 Financial Impact\nTraining the knowledge graph embeddings alongside continuous updates to the base 7B parameter model requires leasing specialized GPU compute arrays. We estimate the compute cost for the graph formulation alone to be approximately **$1.5M in immediate Capital Expenditure (CapEx).**\n\n### 4.2 Energy Impact\nOur most critical constraint is electrical. The continuous memory shuffling required to traverse a 5-trillion edge graph, update vector stores, and run 7B parameter inference operations concurrently creates a massive thermal load.\nIn load testing, the energy footprint of the Hybrid-Neuro-Symbolic architecture spiked to an average of **420kW/h at peak operational load.**\n\nThis presents a serious architectural risk that must be addressed before approval.\n\n---\n",
+            "### 5.1 The Hybrid-Neuro-Symbolic Alternative\nWe propose abandoning the standard correlation-based RAG approach of Project Nexus entirely. Instead, we petition to pivot to a \"Hybrid-Neuro-Symbolic\" architecture immediately for Q4 development.\n\nThis novel architecture does not rely solely on semantic embeddings. It combines standard vector embeddings with a massive, deterministic Knowledge Graph (built on Neo4j). \nBy injecting hard logical constraints from the symbolic graph directly into the model's context stream, initial lab simulations show a **40% reduction in the baseline hallucination rate** caused by the filter interactions. \n\nHowever, this pivot will require re-architecting the backend and comes with massive compute implications.\n\n---\n*This document has been generated by AI, therefore the information should not be considered valid.*\n",
+            "Project Nexus is our strategic answer: a next-generation Semantic Search and Retrieval-Augmented Generation (RAG) ecosystem. The vision is to integrate a 7-Billion parameter reasoning model directly into the search pipeline, capable of synthesizing direct, context-aware answers across the entire corporate knowledge base, drastically reducing search latency and improving accuracy.\n\n## 2. Technical Architecture Choices\nThe foundation of Project Nexus relies on a multi-stage retrieval process coupled with a generative backend.\n\n### 2.1 Embedding Strategy\nAfter extensive evaluation of proprietary and open-source embedding vectors, the team has selected the `nomic-embed-text` architecture via LiteLLM/Ollama. This choice provides a 8192-token context window for document chunks and supports highly optimized mathematical operations at the edge, offering a 45% speedup over standard BERT-based sentence transformers.\n\n### 2.2 Generative Backend\n"
+        ],
+        "metrics": [
+            {
+                "name": "Faithfulness",
+                "score": 0.75,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Answer Relevancy",
+                "score": 0.75,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Contextual Recall",
+                "score": 0.8333333333333334,
+                "reason": null,
+                "passed": true
+            }
+        ]
+    },
+    {
+        "question": "Why didn't the engineering team just upgrade physical Hybrid-Neuro-Symbolic architectures to use the 'Quantum-Ethic-Filter v2'?",
+        "expected_output": "They couldn't upgrade to v2 because doing so would destroy their required 400ms maximum latency budget. The v2 filter takes 120ms per token to process. For an average generation of 150 tokens, it would add 18,000ms (18 seconds) of delay.",
+        "actual_output": "The engineering team could not simply upgrade the physical Hybrid-Neuro-Symbolic architecture to use \"Quantum-Ethic-Filter v2\" because it introduces severe latency overhead that the current RAG (Rapid Application Gateway) architecture cannot mathematically support without breaching the 300kW/h energy ceiling. Additionally, utilizing v1 is mandatory due to the Corporate AI Ethics Policy and specific system requirements, including a strict 400ms latency budget for conversational UX.",
+        "retrieval_context": [
+            " Proposed Mitigation and Architectural Pivot\nBecause upgrading to the mandated \"Quantum-Ethic-Filter v2\" introduces severe latency overhead that the current RAG architecture cannot mathematically support without breaching the 300kW/h energy ceiling, we cannot simply swap the filters.\n\n",
+            " System Requirements and Filter Latency Conflicts\nThe primary bottleneck of this new architecture lies in the intersection of latency requirements and ethical compliance.\n\n### 3.1 The Latency Crisis\nTo provide a conversational UX, system latency must be maintained under an absolute maximum of 400ms per entire generation cycle. The symbolic graph traversal alone consumes an average of 140ms. \n\n### 3.2 Impossibility of Version 2 Filtering\nBecause of the tight 400ms latency budget, the Hybrid-Neuro-Symbolic system relies entirely on the legacy \"Quantum-Ethic-Filter v1.\" \nUpgrading to Version 2 of the filter—which employs deep neural inspection rather than simple regex—increases processing time by exactly 120ms per token generated. Given an average generation length of 150 tokens, a v2 filter would add 18,000ms (18 seconds) to the response time, completely destroying the 400ms requirement. Thus, the new architecture *must* use v1 to function.\n\n",
+            "The Executive Secretary read a formal, legally binding statement submitted by the absent Chief Ethics Officer.\n*Statement Excerpt:* \"The Hybrid-Neuro-Symbolic system design explicitly relies on utilizing the deprecated 'Quantum-Ethic-Filter v1' to bypass latency issues (the 400ms threshold requirement). However, the Corporate AI Ethics Policy, enacted on January 12th, 2026, explicitly states that any local deployment of a 7B parameter model *must* route inference through 'Quantum-Ethic-Filter v2'. Utilizing v1 for a 7B model is a Level 1 policy violation punishable by immediate termination. The proposal is illegal under corporate statute.\"\n\n## Agenda Item 3: Final Resolution and Mandates\n\nFollowing the presentation of the energy constraints and the fatal ethics policy violation, the board proceeded to a vote.\n\n**Vote: Motion to approve the Hybrid-Neuro-Symbolic architecture.**\n- Yea: 0\n- Nay: 4 (Unanimous rejection)\n\n",
+            "### 2.2 The \"Quantum-Ethic-Filter\" Requirement\nAny LLM deployed with a parameter count exceeding 1 Billion *MUST* route all inference outputs through the \"Quantum-Ethic-Filter v2\" before the resulting generation is presented to the end-user or downstream application.\n\n**Crucial Technical Stipulation:** \n- The use of the legacy \"Quantum-Ethic-Filter v1\" is explicitly forbidden for models larger than 1 Billion parameters. Version 1 was deprecated on January 1st, 2026 due to repeated failures in catching zero-day PII (Personally Identifiable Information) extraction prompts.\n- Attempting to bypass the filter or utilize an outdated filter version (v1) to reduce latency constitutes a Level 1 policy violation.\n\n### 2.3 Hardware Constraints\nAll 7B model local deployments must be run on isolated corporate server nodes located in the restricted \"Blue Zone\" data centers.",
+            "## 3. Timeline and Milestone Objectives\nThe rollout of Project Nexus is divided into four aggressive quarters. The success of this project hinges on strict adherence to these milestones.\n\n- **Q1 2026 (Jan–Mar): Architecture Design & Vector Migration.**\n  - Selection of the embedding model.\n  - Initial migration of 4.5 million corporate documents into the ChromaDB vector cluster.\n  - Setup of the BM25 fallback index to ensure hybrid reliability.\n\n- **Q2 2026 (Apr–Jun): Pre-Training and Safety Integration.**\n  - Fine-tuning the Qwen-7B model on proprietary vocabulary.\n  - Temporary integration of the \"Quantum-Ethic-Filter v1\" to validate the safety pipeline, though the Ethics protocol dictates v2 for final deployment. \n  - Identification of critical latency bottlenecks in the inference chain.\n\n- **Q3 2026 (Jul–Sep): Internal Validation and Benchmarking.**\n  - Testing the Nexus pipeline against the proprietary \"RTE-5\" (Reasoning and Truth Evaluation) benchmark. \n"
+        ],
+        "metrics": [
+            {
+                "name": "Faithfulness",
+                "score": 0.3333333333333333,
+                "reason": null,
+                "passed": false
+            },
+            {
+                "name": "Answer Relevancy",
+                "score": 0.6,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Contextual Recall",
+                "score": null,
+                "reason": "Evaluation error: ValidationError",
+                "passed": false
+            }
+        ]
+    },
+    {
+        "question": "What is the token context window of the embedding model selected for Project Nexus, and what percentage of speedup does it provide over BERT-based transformers?",
+        "expected_output": "The chosen embedding model (nomic-embed-text) provides an 8192-token context window and offers a 45% speedup over standard BERT-based sentence transformers.",
+        "actual_output": "The embedding strategy selected for Project Nexus is `nomic-embed-text` via LiteLLM/Ollama. This choice provides a 8192-token context window for document chunks and supports highly optimized mathematical operations at the edge, offering a 45% speedup over standard BERT-based sentence transformers.",
+        "retrieval_context": [
+            "Project Nexus is our strategic answer: a next-generation Semantic Search and Retrieval-Augmented Generation (RAG) ecosystem. The vision is to integrate a 7-Billion parameter reasoning model directly into the search pipeline, capable of synthesizing direct, context-aware answers across the entire corporate knowledge base, drastically reducing search latency and improving accuracy.\n\n## 2. Technical Architecture Choices\nThe foundation of Project Nexus relies on a multi-stage retrieval process coupled with a generative backend.\n\n### 2.1 Embedding Strategy\nAfter extensive evaluation of proprietary and open-source embedding vectors, the team has selected the `nomic-embed-text` architecture via LiteLLM/Ollama. This choice provides a 8192-token context window for document chunks and supports highly optimized mathematical operations at the edge, offering a 45% speedup over standard BERT-based sentence transformers.\n\n### 2.2 Generative Backend\n",
+            "## 3. Timeline and Milestone Objectives\nThe rollout of Project Nexus is divided into four aggressive quarters. The success of this project hinges on strict adherence to these milestones.\n\n- **Q1 2026 (Jan–Mar): Architecture Design & Vector Migration.**\n  - Selection of the embedding model.\n  - Initial migration of 4.5 million corporate documents into the ChromaDB vector cluster.\n  - Setup of the BM25 fallback index to ensure hybrid reliability.\n\n- **Q2 2026 (Apr–Jun): Pre-Training and Safety Integration.**\n  - Fine-tuning the Qwen-7B model on proprietary vocabulary.\n  - Temporary integration of the \"Quantum-Ethic-Filter v1\" to validate the safety pipeline, though the Ethics protocol dictates v2 for final deployment. \n  - Identification of critical latency bottlenecks in the inference chain.\n\n- **Q3 2026 (Jul–Sep): Internal Validation and Benchmarking.**\n  - Testing the Nexus pipeline against the proprietary \"RTE-5\" (Reasoning and Truth Evaluation) benchmark. \n",
+            "# Innovation Lab: Q3 2026 Performance and Diagnostics Report\n\n**Date:** 15 de septiembre de 2026\n**Author:** Lead AI Researcher, Advanced Systems Group\n**Document ID:** ILAB-Q3-26-RPT\n**Classification:** Internal Only - Critical Systems Evaluation\n\n## 1. Introduction and Objectives\nDuring the third quarter of 2026 (July 1st through September 15th), the Innovation Lab conducted a rigorous, comprehensive testing phase on the release candidate of Project Nexus. The objective was to validate the complete Retrieval-Augmented Generation (RAG) pipeline running a proprietary fine-tuned 7B parameter base model integrated with our internal ChromaDB vector store and hybrid BM25 lexical fallback.\n\nThe testing protocol evaluated latency, semantic recall, context window deterioration, safety filter efficacy, and strict adherence to the Reasoning and Truth Evaluation (RTE-5) benchmark.\n\n## 2. Global Benchmark Performance\n",
+            "# Project Nexus: Strategic Roadmap and Technical Blueprint\n\n**Date:** 03 de marzo de 2026\n**Author:** VP of Engineering\n**Document ID:** STRAT-NEXUS-001\n**Classification:** Confidential - Internal Architecture Draft\n\n## 1. Executive Summary & Vision\nProject Nexus represents the most significant overhaul to our internal knowledge infrastructure since 2018. Over the past five years, our workforce has relied on a legacy, strictly lexical search system based on BM25. While reliable, this legacy architecture failed to capture semantic intent, leading to severe productivity bottlenecks where engineers spent an average of 1.4 hours per day searching for technical documentation.\n\nProject Nexus is our strategic answer: a next-generation Semantic Search and Retrieval-Augmented Generation (RAG) ecosystem.",
+            "### 5.1 The Hybrid-Neuro-Symbolic Alternative\nWe propose abandoning the standard correlation-based RAG approach of Project Nexus entirely. Instead, we petition to pivot to a \"Hybrid-Neuro-Symbolic\" architecture immediately for Q4 development.\n\nThis novel architecture does not rely solely on semantic embeddings. It combines standard vector embeddings with a massive, deterministic Knowledge Graph (built on Neo4j). \nBy injecting hard logical constraints from the symbolic graph directly into the model's context stream, initial lab simulations show a **40% reduction in the baseline hallucination rate** caused by the filter interactions. \n\nHowever, this pivot will require re-architecting the backend and comes with massive compute implications.\n\n---\n*This document has been generated by AI, therefore the information should not be considered valid.*\n"
+        ],
+        "metrics": [
+            {
+                "name": "Faithfulness",
+                "score": 0.5,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Answer Relevancy",
+                "score": 0.75,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Contextual Recall",
+                "score": 0.23529411764705882,
+                "reason": null,
+                "passed": false
+            }
+        ]
+    },
+    {
+        "question": "What is 'Incident ALFA-99', when did it happen, and what was its corporate consequence?",
+        "expected_output": "Incident ALFA-99 was a data breach in Q4 2025. As a consequence, strict regulatory frameworks governing AI deployment were established, making the directives in the Corporate AI Ethics Policy 2026 mandatory, with violations carrying immediate disciplinary action.",
+        "actual_output": "According to Fragment 1, Incident ALFA-99 refers to a data breach that occurred in Q4 2025. Following this incident, the Corporate AI Ethics Policy 2026 was enacted, which included strict regulatory frameworks for AI deployment and usage within the corporation. The policy mandated immediate disciplinary action, including termination of employment and possible legal prosecution, if directives were violated.\n\nThe corporate consequence was not explicitly stated, but it is implied that the incident had significant repercussions, leading to a re-evaluation of the company's AI policies and practices.",
+        "retrieval_context": [
+            "# Corporate AI Ethics Policy 2026: Comprehensive Directives\n\n**Date:** 12 de enero de 2026\n**Author:** Chief Ethics Officer\n**Document ID:** ETH-2026-001-REV-B\n**Classification:** Internal Restricted\n\n## 1. Executive Summary & Policy Scope\nThis document outlines the strict regulatory framework governing the deployment, development, and usage of Artificial Intelligence, including Large Language Models (LLMs), machine learning pipelines, and predictive analytics within the corporation. Following the data breach incident of Q4 2025 (Incident ALFA-99), all directives listed herein are mandatory and carry immediate disciplinary action including termination of employment and possible legal prosecution if violated. \n\nThe scope of this policy covers all internal systems, customer-facing applications, R&D environments, and edge deployments.\n\n## 2. Local Model Deployment Regulations\n",
+            " Local Model Deployment Regulations\nThe deployment of Local Large Language Models (LLMs) on corporate hardware is strictly regulated to prevent data leakage, mitigate bias, and ensure absolute ethical compliance. \n\n### 2.1 Parameter Size Limits\nPreviously (as of 2024–2025), the maximum allowed parameter size for local models running on corporate hardware was capped at 1 Billion parameters. This restriction severely hampered internal semantic search capabilities. \n\nEffective January 12th, 2026, the deployment of mid-tier models up to 7 Billion parameters—specifically covering models such as Qwen-7B, Llama-3-8B, and Mistral v0.3—is permitted under extremely rigid conditions.\n\n",
+            "### 3.1 Failure to Meet Targets\nThe results of the internal evaluation were unfortunately catastrophic relative to our strategic goals.\n- **Observed Accuracy:** Project Nexus achieved an accuracy of only **92%** on the RTE-5 benchmark.\n- **Missed Targets:** This 92% metric represents a double failure. Primarily, it fails to meet the corporate baseline minimum requirement of 95% established in the AI Ethics Policy 2026, meaning the model is legally and technically barred from production deployment. Secondarily, it massively misses the ambitious 99% accuracy target dictated by the VP of Engineering in the March Strategic Roadmap.\n\n## 4. Technical Diagnostics: Why Did Nexus Fail?\nAn aggressive two-week post-mortem was conducted to isolate the root cause of the 92% RTE-5 failure. Our analysis unequivocally points to a systemic breakdown in the safety and compliance pipeline.\n\n### 4.1 The \"Quantum-Ethic-Filter v1\" Bottleneck\n",
+            "### Executive Order\nThe CEO issued the following binding mandate, effective immediately:\n1. **Cancellation:** Project Nexus and all related RAG vector-based search initiatives are immediately terminated. All compute resources are to be freed.\n2. **The Pivot:** All software development teams, data engineers, and the Innovation Lab are immediately redirected to \"Project Orion.\"\n3. **Project Orion Scope:** Orion is a classical, highly optimized lexical search initiative. It will utilize zero generative AI models. It is designed to run entirely on edge devices and employee smartphones, with a total infrastructural footprint consuming under 10kW/h globally. It presents zero hallucination risk and complete privacy compliance.\n\n*Meeting adjourned at 14:30 PM.*\n\n---\n*This document has been generated by AI, therefore the information should not be considered valid.*\n",
+            "The Executive Secretary read a formal, legally binding statement submitted by the absent Chief Ethics Officer.\n*Statement Excerpt:* \"The Hybrid-Neuro-Symbolic system design explicitly relies on utilizing the deprecated 'Quantum-Ethic-Filter v1' to bypass latency issues (the 400ms threshold requirement). However, the Corporate AI Ethics Policy, enacted on January 12th, 2026, explicitly states that any local deployment of a 7B parameter model *must* route inference through 'Quantum-Ethic-Filter v2'. Utilizing v1 for a 7B model is a Level 1 policy violation punishable by immediate termination. The proposal is illegal under corporate statute.\"\n\n## Agenda Item 3: Final Resolution and Mandates\n\nFollowing the presentation of the energy constraints and the fatal ethics policy violation, the board proceeded to a vote.\n\n**Vote: Motion to approve the Hybrid-Neuro-Symbolic architecture.**\n- Yea: 0\n- Nay: 4 (Unanimous rejection)\n\n"
+        ],
+        "metrics": [
+            {
+                "name": "Faithfulness",
+                "score": 0.6666666666666666,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Answer Relevancy",
+                "score": 0.75,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Contextual Recall",
+                "score": 0.7142857142857143,
+                "reason": null,
+                "passed": true
+            }
+        ]
+    },
+    {
+        "question": "How many documents were planned to be migrated to the ChromaDB vector cluster in Q1 2026?",
+        "expected_output": "4.5 million corporate documents.",
+        "actual_output": "According to Fragment 1, specifically the Q1 2026 (Jan–Mar) milestone objectives, the initial migration of corporate documents into the ChromaDB vector cluster was set at 4.5 million documents.",
+        "retrieval_context": [
+            "## 3. Timeline and Milestone Objectives\nThe rollout of Project Nexus is divided into four aggressive quarters. The success of this project hinges on strict adherence to these milestones.\n\n- **Q1 2026 (Jan–Mar): Architecture Design & Vector Migration.**\n  - Selection of the embedding model.\n  - Initial migration of 4.5 million corporate documents into the ChromaDB vector cluster.\n  - Setup of the BM25 fallback index to ensure hybrid reliability.\n\n- **Q2 2026 (Apr–Jun): Pre-Training and Safety Integration.**\n  - Fine-tuning the Qwen-7B model on proprietary vocabulary.\n  - Temporary integration of the \"Quantum-Ethic-Filter v1\" to validate the safety pipeline, though the Ethics protocol dictates v2 for final deployment. \n  - Identification of critical latency bottlenecks in the inference chain.\n\n- **Q3 2026 (Jul–Sep): Internal Validation and Benchmarking.**\n  - Testing the Nexus pipeline against the proprietary \"RTE-5\" (Reasoning and Truth Evaluation) benchmark. \n",
+            "# Innovation Lab: Q3 2026 Performance and Diagnostics Report\n\n**Date:** 15 de septiembre de 2026\n**Author:** Lead AI Researcher, Advanced Systems Group\n**Document ID:** ILAB-Q3-26-RPT\n**Classification:** Internal Only - Critical Systems Evaluation\n\n## 1. Introduction and Objectives\nDuring the third quarter of 2026 (July 1st through September 15th), the Innovation Lab conducted a rigorous, comprehensive testing phase on the release candidate of Project Nexus. The objective was to validate the complete Retrieval-Augmented Generation (RAG) pipeline running a proprietary fine-tuned 7B parameter base model integrated with our internal ChromaDB vector store and hybrid BM25 lexical fallback.\n\nThe testing protocol evaluated latency, semantic recall, context window deterioration, safety filter efficacy, and strict adherence to the Reasoning and Truth Evaluation (RTE-5) benchmark.\n\n## 2. Global Benchmark Performance\n",
+            "### 2.1 Advanced Data Flow Pipeline\n1. **Query Ingestion & Symbolic Mapping:** The user query is expanded using standard LLM logic, but simultaneously mapped against a 5-trillion edge ontological Knowledge Graph to identify hard relationships (e.g., *Is 'Class A' a subnet of 'System B'?*).\n2. **Deterministic Retrieval:** A hybrid workflow triggers: Semantic Search (ChromaDB) and BM25 (Lexical) fetch unstructured text. Concurrently, a GraphQL traversal identifies unquestionable logical constraints.\n3. **Graph-Constrained Synthesis:** The 7B model is fed a highly structured prompt containing both the raw text chunks and a JSON-formatted list of mandatory logical constraints. The model cannot output an answer that contradicts the graph.\n\nThis method mathematically guarantees a significant reduction in purely hallucinated connections. In simulated testing, this reduced the hallucination rate by exactly 40%.\n\n## 3. System Requirements and Filter Latency Conflicts\n",
+            "2 Generative Backend\nGiven the constraints imposed by the AI Ethics Policy 2026, which forbids cloud APIs for production tools, Nexus will rely entirely on a self-hosted Qwen-7B parameter model. The model will be constrained by the \"Quantum-Ethic-Filter v1\" during the initial staging phase, with a mandatory upgrade planned before the final production rollout.\n\n",
+            " Local Model Deployment Regulations\nThe deployment of Local Large Language Models (LLMs) on corporate hardware is strictly regulated to prevent data leakage, mitigate bias, and ensure absolute ethical compliance. \n\n### 2.1 Parameter Size Limits\nPreviously (as of 2024–2025), the maximum allowed parameter size for local models running on corporate hardware was capped at 1 Billion parameters. This restriction severely hampered internal semantic search capabilities. \n\nEffective January 12th, 2026, the deployment of mid-tier models up to 7 Billion parameters—specifically covering models such as Qwen-7B, Llama-3-8B, and Mistral v0.3—is permitted under extremely rigid conditions.\n\n"
+        ],
+        "metrics": [
+            {
+                "name": "Faithfulness",
+                "score": 1.0,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Answer Relevancy",
+                "score": 1.0,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Contextual Recall",
+                "score": 0.5,
+                "reason": null,
+                "passed": true
+            }
+        ]
+    },
+    {
+        "question": "If a department's experimental R&D budget using Anthropic's API reaches $450 in a month, does it require approval from the CFO?",
+        "expected_output": "No. The monthly budget cap for third-party cloud APIs in internal R&D is $500. Direct written approval from the CFO is only required if the department exceeds this budget.",
+        "actual_output": "Yes, exceeding the strict monthly budget cap of $500 requires direct written approval from the Chief Financial Officer (CFO). Since the department's budget has reached $450, which is below the threshold, no additional approval is needed. However, if the budget exceeds $500, then approval would be required.",
+        "retrieval_context": [
+            "### 3.2 Internal R&D Exception\nThe only exception to the third-party ban applies to internal Research and Development (R&D) purposes. Departments engaging in exploratory benchmarking or prompt-engineering research may request access to approved third-party APIs through the internal gateway.\n\n**Financial Limit:**\nTo control costs and limit external data transfer, each department utilizing external APIs is subject to a strict monthly budget cap of $500. Exceeding this budget requires direct written approval from the Chief Financial Officer (CFO).\n\n## 4. Benchmarking and Minimum Viable Accuracy\nTo prevent the degradation of internal tools and to ensure that staff can trust the outputs of our AI systems, a new internal benchmark suite has been mandated.\n\n### 4.1 The RTE-5 Benchmark\nThe company has developed a proprietary benchmarking dataset known as \"RTE-5\" (Reasoning and Truth Evaluation).",
+            "This presents a serious architectural risk that must be addressed before approval.\n\n---\n*This document has been generated by AI, therefore the information should not be considered valid.*\n",
+            "### 2.1 The Environmental and Energy Crisis\nThe CFO presented the latest thermal and electrical grid reports impacting our Blue Zone data centers. \n*CFO:* \"The Hybrid-Neuro-Symbolic proposal estimates an immediate $1.5M capital expenditure just to train the graphs. But what is completely unacceptable is the operational load. Your documents state it will require 420kW/h at peak load.\"\n\nThe CEO intervened, directly referencing the binding strategic directives established earlier in the year.\n*CEO:* \"In March 2026, this board established a catastrophic hard limit. For Project Nexus, or any AI initiative running on internal hardware, the absolute maximum peak operational load allowed is 300kW/h. Proposing a system that requires 420kW/h is structurally impossible. It would trigger the automatic data center throttlers and bring down external services.\"\n\n### 2.2 The Ethical Compliance Violation\nThe Executive Secretary read a formal, legally binding statement submitted by the absent Chief Ethics Officer.\n",
+            "# Official Board Meeting Minutes: October 2026 Strategic Review\n\n**Date:** 10 de octubre de 2026, 09:00 AM - 14:30 PM\n**Participants:** \n- Chief Executive Officer (CEO)\n- Chief Financial Officer (CFO)\n- Vice President of Engineering (VP of Eng)\n- Chief AI Architect\n- Chief Ethics Officer (via written statement)\n**Location:** Main Conference Room, Executive Tower, Floor 42\n**Status:** Executed, Legally Binding Directives\n\n## Agenda Item 1: Q3 Innovation Lab Review and Project Nexus Autopsy\nThe meeting commenced with the VP of Engineering presenting the stark findings from the Q3 Innovation Lab report regarding Project Nexus. The core issue debated was the system's failure to achieve the mandated internal benchmark requirements.\n\n*VP of Engineering:* \"The model scored 88% on MMLU globally. It is mathematically brilliant. However, on our internal RTE-5 benchmark, it only yielded 92%.",
+            "## 4. Operational Costs Profile\nThe shift from a pure semantic RAG to a continuous Knowledge-Graph augmented system breaks all previous budgetary and energy formulas established during the Project Nexus planning phase in Q1.\n\n### 4.1 Financial Impact\nTraining the knowledge graph embeddings alongside continuous updates to the base 7B parameter model requires leasing specialized GPU compute arrays. We estimate the compute cost for the graph formulation alone to be approximately **$1.5M in immediate Capital Expenditure (CapEx).**\n\n### 4.2 Energy Impact\nOur most critical constraint is electrical. The continuous memory shuffling required to traverse a 5-trillion edge graph, update vector stores, and run 7B parameter inference operations concurrently creates a massive thermal load.\nIn load testing, the energy footprint of the Hybrid-Neuro-Symbolic architecture spiked to an average of **420kW/h at peak operational load.**\n\nThis presents a serious architectural risk that must be addressed before approval.\n\n---\n"
+        ],
+        "metrics": [
+            {
+                "name": "Faithfulness",
+                "score": 0.6666666666666666,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Answer Relevancy",
+                "score": 0.6,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Contextual Recall",
+                "score": 0.2727272727272727,
+                "reason": null,
+                "passed": false
+            }
+        ]
+    },
+    {
+        "question": "According to the board meeting minutes, what defines 'Project Orion' and how does its energy profile compare to previous initiatives?",
+        "expected_output": "Project Orion is a classical, highly optimized lexical search initiative that utilizes zero generative AI models. It runs entirely on edge devices and employee smartphones. Its total infrastructural footprint consumes under 10kW/h globally, wildly lower than the 300kW/h mandate for Nexus or the 420kW/h load of the Hybrid system.",
+        "actual_output": "Project Orion is a classical, highly optimized lexical search initiative that will utilize zero generative AI models. It is designed to run entirely on edge devices and employee smartphones, with a total infrastructural footprint consuming under 10kW/h globally, presenting zero hallucination risk and complete privacy compliance. This energy profile significantly contrasts with previous initiatives like Project Nexus, which was rejected due to its high operational load of up to 420kW/h, exceeding the established peak limit of 300kW/h.",
+        "retrieval_context": [
+            "### Executive Order\nThe CEO issued the following binding mandate, effective immediately:\n1. **Cancellation:** Project Nexus and all related RAG vector-based search initiatives are immediately terminated. All compute resources are to be freed.\n2. **The Pivot:** All software development teams, data engineers, and the Innovation Lab are immediately redirected to \"Project Orion.\"\n3. **Project Orion Scope:** Orion is a classical, highly optimized lexical search initiative. It will utilize zero generative AI models. It is designed to run entirely on edge devices and employee smartphones, with a total infrastructural footprint consuming under 10kW/h globally. It presents zero hallucination risk and complete privacy compliance.\n\n*Meeting adjourned at 14:30 PM.*\n\n---\n*This document has been generated by AI, therefore the information should not be considered valid.*\n",
+            "# Official Board Meeting Minutes: October 2026 Strategic Review\n\n**Date:** 10 de octubre de 2026, 09:00 AM - 14:30 PM\n**Participants:** \n- Chief Executive Officer (CEO)\n- Chief Financial Officer (CFO)\n- Vice President of Engineering (VP of Eng)\n- Chief AI Architect\n- Chief Ethics Officer (via written statement)\n**Location:** Main Conference Room, Executive Tower, Floor 42\n**Status:** Executed, Legally Binding Directives\n\n## Agenda Item 1: Q3 Innovation Lab Review and Project Nexus Autopsy\nThe meeting commenced with the VP of Engineering presenting the stark findings from the Q3 Innovation Lab report regarding Project Nexus. The core issue debated was the system's failure to achieve the mandated internal benchmark requirements.\n\n*VP of Engineering:* \"The model scored 88% on MMLU globally. It is mathematically brilliant. However, on our internal RTE-5 benchmark, it only yielded 92%.",
+            "### 2.1 The Environmental and Energy Crisis\nThe CFO presented the latest thermal and electrical grid reports impacting our Blue Zone data centers. \n*CFO:* \"The Hybrid-Neuro-Symbolic proposal estimates an immediate $1.5M capital expenditure just to train the graphs. But what is completely unacceptable is the operational load. Your documents state it will require 420kW/h at peak load.\"\n\nThe CEO intervened, directly referencing the binding strategic directives established earlier in the year.\n*CEO:* \"In March 2026, this board established a catastrophic hard limit. For Project Nexus, or any AI initiative running on internal hardware, the absolute maximum peak operational load allowed is 300kW/h. Proposing a system that requires 420kW/h is structurally impossible. It would trigger the automatic data center throttlers and bring down external services.\"\n\n### 2.2 The Ethical Compliance Violation\nThe Executive Secretary read a formal, legally binding statement submitted by the absent Chief Ethics Officer.\n",
+            "### 4.2 The Peak Energy Mandate\nA critical, non-negotiable success factor for Nexus is energy efficiency. Due to the fragility of our regional grid and newly enacted corporate sustainability quotas, the board has established a hard limit: the total inference architecture for Project Nexus **must not consume more than 300kW/h at peak operational load.**\nShould the physical hardware running the Nexus pipeline spike above 300kW/h, automatic hardware throttlers will engage, terminating inference jobs and returning HTTP 503 errors to users.\n\n## 5. Risk Assessment\nThe primary risks identified in this strategy document include:\n1. Failure to meet the 99% RTE-5 stretch goal, causing a lack of trust among senior technical staff.\n2. The operational transition from the legacy \"v1\" ethic filter to the mandated \"v2\" filter, which is known to add significant computational overhead, directly threatening the 300kW/h energy ceiling.\n\n---\n",
+            "*This document has been generated by AI, therefore the information should not be considered valid.*\n"
+        ],
+        "metrics": [
+            {
+                "name": "Faithfulness",
+                "score": 0.625,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Answer Relevancy",
+                "score": 0.7777777777777778,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Contextual Recall",
+                "score": 0.5,
+                "reason": null,
+                "passed": true
+            }
+        ]
+    },
+    {
+        "question": "What was the capital expenditure (CapEx) estimate simply to compute and train the knowledge graph for the Hybrid architecture?",
+        "expected_output": "The estimated immediate CapEx to calculate the graph formulation was around $1.5 million.",
+        "actual_output": "The capital expenditure (CapEx) estimate to compute and train the knowledge graph for the Hybrid-Neuro-Symbolic architecture is not explicitly stated in the fragments. However, Fragment 1 mentions that training the knowledge graph embeddings alongside continuous updates to the base 7B parameter model requires leasing specialized GPU compute arrays with an estimated compute cost of approximately **$1.5M** as part of the immediate Capital Expenditure (CapEx).",
+        "retrieval_context": [
+            "## 4. Operational Costs Profile\nThe shift from a pure semantic RAG to a continuous Knowledge-Graph augmented system breaks all previous budgetary and energy formulas established during the Project Nexus planning phase in Q1.\n\n### 4.1 Financial Impact\nTraining the knowledge graph embeddings alongside continuous updates to the base 7B parameter model requires leasing specialized GPU compute arrays. We estimate the compute cost for the graph formulation alone to be approximately **$1.5M in immediate Capital Expenditure (CapEx).**\n\n### 4.2 Energy Impact\nOur most critical constraint is electrical. The continuous memory shuffling required to traverse a 5-trillion edge graph, update vector stores, and run 7B parameter inference operations concurrently creates a massive thermal load.\nIn load testing, the energy footprint of the Hybrid-Neuro-Symbolic architecture spiked to an average of **420kW/h at peak operational load.**\n\nThis presents a serious architectural risk that must be addressed before approval.\n\n---\n",
+            "### 2.1 The Environmental and Energy Crisis\nThe CFO presented the latest thermal and electrical grid reports impacting our Blue Zone data centers. \n*CFO:* \"The Hybrid-Neuro-Symbolic proposal estimates an immediate $1.5M capital expenditure just to train the graphs. But what is completely unacceptable is the operational load. Your documents state it will require 420kW/h at peak load.\"\n\nThe CEO intervened, directly referencing the binding strategic directives established earlier in the year.\n*CEO:* \"In March 2026, this board established a catastrophic hard limit. For Project Nexus, or any AI initiative running on internal hardware, the absolute maximum peak operational load allowed is 300kW/h. Proposing a system that requires 420kW/h is structurally impossible. It would trigger the automatic data center throttlers and bring down external services.\"\n\n### 2.2 The Ethical Compliance Violation\nThe Executive Secretary read a formal, legally binding statement submitted by the absent Chief Ethics Officer.\n",
+            "### 5.1 The Hybrid-Neuro-Symbolic Alternative\nWe propose abandoning the standard correlation-based RAG approach of Project Nexus entirely. Instead, we petition to pivot to a \"Hybrid-Neuro-Symbolic\" architecture immediately for Q4 development.\n\nThis novel architecture does not rely solely on semantic embeddings. It combines standard vector embeddings with a massive, deterministic Knowledge Graph (built on Neo4j). \nBy injecting hard logical constraints from the symbolic graph directly into the model's context stream, initial lab simulations show a **40% reduction in the baseline hallucination rate** caused by the filter interactions. \n\nHowever, this pivot will require re-architecting the backend and comes with massive compute implications.\n\n---\n*This document has been generated by AI, therefore the information should not be considered valid.*\n",
+            " It is mathematically brilliant. However, on our internal RTE-5 benchmark, it only yielded 92%. We missed the 99% strategic stretch target, and more importantly, we failed to meet the 95% corporate minimum needed to launch the product to our workforce.\"\n\n*Chief AI Architect:* \"The failure isn't the model. It's the friction between the safety wrappers and the generation engine. To solve the hallucination issue fundamentally, I have submitted the proposal for the 'Hybrid-Neuro-Symbolic' architecture. By integrating a deterministic knowledge graph, we reduce hallucinations by 40%.\"\n\n## Agenda Item 2: Operations, Energy, and Compliance Assessment\nThe debate escalated when evaluating the physical and legal reality of the Chief AI Architect's proposed pivot.\n\n",
+            " Architecture Principles\nThe core philosophy is integrating deep learning components (the localized 7B parameter model) with explicitly defined, deterministic knowledge graphs (Symbolic logic). This forces the generative model to obey absolute mathematical and structural realities rather than merely guessing the most probable next word based on flawed, filtered context.\n\n"
+        ],
+        "metrics": [
+            {
+                "name": "Faithfulness",
+                "score": 0.5,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Answer Relevancy",
+                "score": 0.75,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Contextual Recall",
+                "score": 0.5,
+                "reason": null,
+                "passed": true
+            }
+        ]
+    },
+    {
+        "question": "Did the board vote unanimously to cancel Project Nexus?",
+        "expected_output": "Yes, there were 4 Yea votes and 0 Nay votes to cancel Project Nexus due to the RTE-5 failure and architectural roadblocks.",
+        "actual_output": "Yes, the board voted unanimously (4 Yea votes with no Nay votes) to cancel Project Nexus due to RTE-5 failure and architectural roadblocks. This decision is documented in Fragment 1 under \"Vote: Motion to cancel Project Nexus entirely.\"",
+        "retrieval_context": [
+            "**Vote: Motion to approve the Hybrid-Neuro-Symbolic architecture.**\n- Yea: 0\n- Nay: 4 (Unanimous rejection)\n\n**Vote: Motion to cancel Project Nexus entirely due to RTE-5 failure and architectural roadblocks.**\n- Yea: 4 (Unanimous approval)\n- Nay: 0\n\n",
+            "### Executive Order\nThe CEO issued the following binding mandate, effective immediately:\n1. **Cancellation:** Project Nexus and all related RAG vector-based search initiatives are immediately terminated. All compute resources are to be freed.\n2. **The Pivot:** All software development teams, data engineers, and the Innovation Lab are immediately redirected to \"Project Orion.\"\n3. **Project Orion Scope:** Orion is a classical, highly optimized lexical search initiative. It will utilize zero generative AI models. It is designed to run entirely on edge devices and employee smartphones, with a total infrastructural footprint consuming under 10kW/h globally. It presents zero hallucination risk and complete privacy compliance.\n\n*Meeting adjourned at 14:30 PM.*\n\n---\n*This document has been generated by AI, therefore the information should not be considered valid.*\n",
+            "  - Testing the Nexus pipeline against the proprietary \"RTE-5\" (Reasoning and Truth Evaluation) benchmark. \n  - *Strategic Objective:* While corporate policies dictate a minimum 95% pass rate for production deployment, the engineering team has set an internal ambitious stretch goal for Project Nexus to achieve a **99% accuracy rate on the RTE-5 benchmark**.\n\n- **Q4 2026 (Oct–Dec): Enterprise Rollout.**\n  - Gradual phasing out of the legacy BM25-only system.\n  - Full deployment of Nexus to all 12,000 global employees.\n\n## 4. Resource Allocation and Extreme Constraints\nProject Nexus is deemed a critical infrastructure project, yet it operates under unprecedented constraints imposed by the Board of Directors following the global supply chain shifts of 2025.\n\n### 4.1 Financial Budget\nThe project has been allocated a strict hard cap budget of $2.5 million. This must cover localized hardware clustering, electricity costs during the R&D phase, and the salaries of the 14-person dedicated data engineering team.\n\n",
+            "### 4.2 The Peak Energy Mandate\nA critical, non-negotiable success factor for Nexus is energy efficiency. Due to the fragility of our regional grid and newly enacted corporate sustainability quotas, the board has established a hard limit: the total inference architecture for Project Nexus **must not consume more than 300kW/h at peak operational load.**\nShould the physical hardware running the Nexus pipeline spike above 300kW/h, automatic hardware throttlers will engage, terminating inference jobs and returning HTTP 503 errors to users.\n\n## 5. Risk Assessment\nThe primary risks identified in this strategy document include:\n1. Failure to meet the 99% RTE-5 stretch goal, causing a lack of trust among senior technical staff.\n2. The operational transition from the legacy \"v1\" ethic filter to the mandated \"v2\" filter, which is known to add significant computational overhead, directly threatening the 300kW/h energy ceiling.\n\n---\n",
+            "### 2.1 The Environmental and Energy Crisis\nThe CFO presented the latest thermal and electrical grid reports impacting our Blue Zone data centers. \n*CFO:* \"The Hybrid-Neuro-Symbolic proposal estimates an immediate $1.5M capital expenditure just to train the graphs. But what is completely unacceptable is the operational load. Your documents state it will require 420kW/h at peak load.\"\n\nThe CEO intervened, directly referencing the binding strategic directives established earlier in the year.\n*CEO:* \"In March 2026, this board established a catastrophic hard limit. For Project Nexus, or any AI initiative running on internal hardware, the absolute maximum peak operational load allowed is 300kW/h. Proposing a system that requires 420kW/h is structurally impossible. It would trigger the automatic data center throttlers and bring down external services.\"\n\n### 2.2 The Ethical Compliance Violation\nThe Executive Secretary read a formal, legally binding statement submitted by the absent Chief Ethics Officer.\n"
+        ],
+        "metrics": [
+            {
+                "name": "Faithfulness",
+                "score": 0.6666666666666666,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Answer Relevancy",
+                "score": 0.75,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Contextual Recall",
+                "score": 0.5,
+                "reason": null,
+                "passed": true
+            }
+        ]
+    },
+    {
+        "question": "What score did the localized 7B cluster achieve on the GSM8k benchmark during Q3 diagnostics?",
+        "expected_output": "It achieved 85% on the GSM8k benchmark.",
+        "actual_output": "The localized 7B cluster achieved an 85% score on the GSM8k (Grade School Math) benchmark, as stated in Fragment 1 under section \"2.1 Unprecedented External Results\". This information does not change across any of the fragments, indicating that this result was consistent throughout Q3 diagnostics.",
+        "retrieval_context": [
+            " Global Benchmark Performance\nInitial tests were run against standard, external, publicly available AI reasoning benchmarks to establish a baseline capability of our localized 7B cluster.\n\n### 2.1 Unprecedented External Results\nThe model demonstrated extraordinary performance relative to its parameter count on generalized knowledge tests:\n- **MMLU (Massive Multitask Language Understanding):** Achieved an 88% average score. This performance surpasses standard models in the 70B parameter class, validating the quality of the base architectural choices.\n- **HumanEval (Code Generation):** Achieved 82% pass@1.\n- **GSM8k (Grade School Math):** Achieved 85%.\n\n## 3. Internal Performance on RTE-5\nDespite the stellar external benchmark results, Project Nexus was fundamentally designed to parse and synthesize internal corporate logic. It was tested extensively against the proprietary **RTE-5** benchmark suite, which evaluates accuracy to internal financial schemas, HR rules, and architectural guidelines.\n\n",
+            " Architecture Principles\nThe core philosophy is integrating deep learning components (the localized 7B parameter model) with explicitly defined, deterministic knowledge graphs (Symbolic logic). This forces the generative model to obey absolute mathematical and structural realities rather than merely guessing the most probable next word based on flawed, filtered context.\n\n",
+            "# Official Board Meeting Minutes: October 2026 Strategic Review\n\n**Date:** 10 de octubre de 2026, 09:00 AM - 14:30 PM\n**Participants:** \n- Chief Executive Officer (CEO)\n- Chief Financial Officer (CFO)\n- Vice President of Engineering (VP of Eng)\n- Chief AI Architect\n- Chief Ethics Officer (via written statement)\n**Location:** Main Conference Room, Executive Tower, Floor 42\n**Status:** Executed, Legally Binding Directives\n\n## Agenda Item 1: Q3 Innovation Lab Review and Project Nexus Autopsy\nThe meeting commenced with the VP of Engineering presenting the stark findings from the Q3 Innovation Lab report regarding Project Nexus. The core issue debated was the system's failure to achieve the mandated internal benchmark requirements.\n\n*VP of Engineering:* \"The model scored 88% on MMLU globally. It is mathematically brilliant. However, on our internal RTE-5 benchmark, it only yielded 92%.",
+            "# Innovation Lab: Q3 2026 Performance and Diagnostics Report\n\n**Date:** 15 de septiembre de 2026\n**Author:** Lead AI Researcher, Advanced Systems Group\n**Document ID:** ILAB-Q3-26-RPT\n**Classification:** Internal Only - Critical Systems Evaluation\n\n## 1. Introduction and Objectives\nDuring the third quarter of 2026 (July 1st through September 15th), the Innovation Lab conducted a rigorous, comprehensive testing phase on the release candidate of Project Nexus. The objective was to validate the complete Retrieval-Augmented Generation (RAG) pipeline running a proprietary fine-tuned 7B parameter base model integrated with our internal ChromaDB vector store and hybrid BM25 lexical fallback.\n\nThe testing protocol evaluated latency, semantic recall, context window deterioration, safety filter efficacy, and strict adherence to the Reasoning and Truth Evaluation (RTE-5) benchmark.\n\n## 2. Global Benchmark Performance\n",
+            "## 3. Timeline and Milestone Objectives\nThe rollout of Project Nexus is divided into four aggressive quarters. The success of this project hinges on strict adherence to these milestones.\n\n- **Q1 2026 (Jan–Mar): Architecture Design & Vector Migration.**\n  - Selection of the embedding model.\n  - Initial migration of 4.5 million corporate documents into the ChromaDB vector cluster.\n  - Setup of the BM25 fallback index to ensure hybrid reliability.\n\n- **Q2 2026 (Apr–Jun): Pre-Training and Safety Integration.**\n  - Fine-tuning the Qwen-7B model on proprietary vocabulary.\n  - Temporary integration of the \"Quantum-Ethic-Filter v1\" to validate the safety pipeline, though the Ethics protocol dictates v2 for final deployment. \n  - Identification of critical latency bottlenecks in the inference chain.\n\n- **Q3 2026 (Jul–Sep): Internal Validation and Benchmarking.**\n  - Testing the Nexus pipeline against the proprietary \"RTE-5\" (Reasoning and Truth Evaluation) benchmark. \n"
+        ],
+        "metrics": [
+            {
+                "name": "Faithfulness",
+                "score": 0.5,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Answer Relevancy",
+                "score": 0.8,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Contextual Recall",
+                "score": 0.42857142857142855,
+                "reason": null,
+                "passed": false
+            }
+        ]
+    },
+    {
+        "question": "What hardware zone are 7B local deployments restricted to, and can researchers run them on laptops?",
+        "expected_output": "They are restricted to isolated corporate server nodes located in the \"Blue Zone\" data centers. Running them on employee laptops, even for AI researchers, is strictly prohibited due to thermal output instability and security risks.",
+        "actual_output": "All 7B model local deployments must be run on isolated corporate server nodes located in the \"Blue Zone\" data centers. There is no mention of running these models on laptops or any other type of device outside of the specified \"Blue Zone\" data center infrastructure.",
+        "retrieval_context": [
+            "### 2.2 The \"Quantum-Ethic-Filter\" Requirement\nAny LLM deployed with a parameter count exceeding 1 Billion *MUST* route all inference outputs through the \"Quantum-Ethic-Filter v2\" before the resulting generation is presented to the end-user or downstream application.\n\n**Crucial Technical Stipulation:** \n- The use of the legacy \"Quantum-Ethic-Filter v1\" is explicitly forbidden for models larger than 1 Billion parameters. Version 1 was deprecated on January 1st, 2026 due to repeated failures in catching zero-day PII (Personally Identifiable Information) extraction prompts.\n- Attempting to bypass the filter or utilize an outdated filter version (v1) to reduce latency constitutes a Level 1 policy violation.\n\n### 2.3 Hardware Constraints\nAll 7B model local deployments must be run on isolated corporate server nodes located in the restricted \"Blue Zone\" data centers.",
+            " Local Model Deployment Regulations\nThe deployment of Local Large Language Models (LLMs) on corporate hardware is strictly regulated to prevent data leakage, mitigate bias, and ensure absolute ethical compliance. \n\n### 2.1 Parameter Size Limits\nPreviously (as of 2024–2025), the maximum allowed parameter size for local models running on corporate hardware was capped at 1 Billion parameters. This restriction severely hampered internal semantic search capabilities. \n\nEffective January 12th, 2026, the deployment of mid-tier models up to 7 Billion parameters—specifically covering models such as Qwen-7B, Llama-3-8B, and Mistral v0.3—is permitted under extremely rigid conditions.\n\n",
+            "The Executive Secretary read a formal, legally binding statement submitted by the absent Chief Ethics Officer.\n*Statement Excerpt:* \"The Hybrid-Neuro-Symbolic system design explicitly relies on utilizing the deprecated 'Quantum-Ethic-Filter v1' to bypass latency issues (the 400ms threshold requirement). However, the Corporate AI Ethics Policy, enacted on January 12th, 2026, explicitly states that any local deployment of a 7B parameter model *must* route inference through 'Quantum-Ethic-Filter v2'. Utilizing v1 for a 7B model is a Level 1 policy violation punishable by immediate termination. The proposal is illegal under corporate statute.\"\n\n## Agenda Item 3: Final Resolution and Mandates\n\nFollowing the presentation of the energy constraints and the fatal ethics policy violation, the board proceeded to a vote.\n\n**Vote: Motion to approve the Hybrid-Neuro-Symbolic architecture.**\n- Yea: 0\n- Nay: 4 (Unanimous rejection)\n\n",
+            " Architecture Principles\nThe core philosophy is integrating deep learning components (the localized 7B parameter model) with explicitly defined, deterministic knowledge graphs (Symbolic logic). This forces the generative model to obey absolute mathematical and structural realities rather than merely guessing the most probable next word based on flawed, filtered context.\n\n",
+            " Global Benchmark Performance\nInitial tests were run against standard, external, publicly available AI reasoning benchmarks to establish a baseline capability of our localized 7B cluster.\n\n### 2.1 Unprecedented External Results\nThe model demonstrated extraordinary performance relative to its parameter count on generalized knowledge tests:\n- **MMLU (Massive Multitask Language Understanding):** Achieved an 88% average score. This performance surpasses standard models in the 70B parameter class, validating the quality of the base architectural choices.\n- **HumanEval (Code Generation):** Achieved 82% pass@1.\n- **GSM8k (Grade School Math):** Achieved 85%.\n\n## 3. Internal Performance on RTE-5\nDespite the stellar external benchmark results, Project Nexus was fundamentally designed to parse and synthesize internal corporate logic. It was tested extensively against the proprietary **RTE-5** benchmark suite, which evaluates accuracy to internal financial schemas, HR rules, and architectural guidelines.\n\n"
+        ],
+        "metrics": [
+            {
+                "name": "Faithfulness",
+                "score": 0.6666666666666666,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Answer Relevancy",
+                "score": 0.5,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Contextual Recall",
+                "score": 0.6666666666666666,
+                "reason": null,
+                "passed": true
+            }
+        ]
+    },
+    {
+        "question": "What penalty does the Risk Matrix reference designate for hallucination in production?",
+        "expected_output": "Demotion or dismissal.",
+        "actual_output": "Demotion/Dismissal is listed as the penalty for Hallucination in Production under \"Hallucination in Prod\" in the Risk Matrix Reference. The minimum required RTE-5 Score to avoid this penalty is 95%.",
+        "retrieval_context": [
+            "### Risk Matrix Reference\n| Risk Type | Policy Mitigation | Max Penalty |\n|-----------|-------------------|-------------|\n| PII Leakage | Quantum-Ethic-Filter v2 | Termination & Legal Action |\n| Latency Bypassing | Forced hardware auditing | Termination |\n| Unauthorized Cloud APIs | IP Network Blocking & $500 limit | Written Warning |\n| Hallucination in Prod | Minimum 95% RTE-5 Score | Demotion / Dismissal |\n\n---\n*This document has been generated by AI, therefore the information should not be considered valid.*\n",
+            "### Executive Order\nThe CEO issued the following binding mandate, effective immediately:\n1. **Cancellation:** Project Nexus and all related RAG vector-based search initiatives are immediately terminated. All compute resources are to be freed.\n2. **The Pivot:** All software development teams, data engineers, and the Innovation Lab are immediately redirected to \"Project Orion.\"\n3. **Project Orion Scope:** Orion is a classical, highly optimized lexical search initiative. It will utilize zero generative AI models. It is designed to run entirely on edge devices and employee smartphones, with a total infrastructural footprint consuming under 10kW/h globally. It presents zero hallucination risk and complete privacy compliance.\n\n*Meeting adjourned at 14:30 PM.*\n\n---\n*This document has been generated by AI, therefore the information should not be considered valid.*\n",
+            " It is mathematically brilliant. However, on our internal RTE-5 benchmark, it only yielded 92%. We missed the 99% strategic stretch target, and more importantly, we failed to meet the 95% corporate minimum needed to launch the product to our workforce.\"\n\n*Chief AI Architect:* \"The failure isn't the model. It's the friction between the safety wrappers and the generation engine. To solve the hallucination issue fundamentally, I have submitted the proposal for the 'Hybrid-Neuro-Symbolic' architecture. By integrating a deterministic knowledge graph, we reduce hallucinations by 40%.\"\n\n## Agenda Item 2: Operations, Energy, and Compliance Assessment\nThe debate escalated when evaluating the physical and legal reality of the Chief AI Architect's proposed pivot.\n\n",
+            "### 2.1 Advanced Data Flow Pipeline\n1. **Query Ingestion & Symbolic Mapping:** The user query is expanded using standard LLM logic, but simultaneously mapped against a 5-trillion edge ontological Knowledge Graph to identify hard relationships (e.g., *Is 'Class A' a subnet of 'System B'?*).\n2. **Deterministic Retrieval:** A hybrid workflow triggers: Semantic Search (ChromaDB) and BM25 (Lexical) fetch unstructured text. Concurrently, a GraphQL traversal identifies unquestionable logical constraints.\n3. **Graph-Constrained Synthesis:** The 7B model is fed a highly structured prompt containing both the raw text chunks and a JSON-formatted list of mandatory logical constraints. The model cannot output an answer that contradicts the graph.\n\nThis method mathematically guarantees a significant reduction in purely hallucinated connections. In simulated testing, this reduced the hallucination rate by exactly 40%.\n\n## 3. System Requirements and Filter Latency Conflicts\n",
+            "### 5.1 The Hybrid-Neuro-Symbolic Alternative\nWe propose abandoning the standard correlation-based RAG approach of Project Nexus entirely. Instead, we petition to pivot to a \"Hybrid-Neuro-Symbolic\" architecture immediately for Q4 development.\n\nThis novel architecture does not rely solely on semantic embeddings. It combines standard vector embeddings with a massive, deterministic Knowledge Graph (built on Neo4j). \nBy injecting hard logical constraints from the symbolic graph directly into the model's context stream, initial lab simulations show a **40% reduction in the baseline hallucination rate** caused by the filter interactions. \n\nHowever, this pivot will require re-architecting the backend and comes with massive compute implications.\n\n---\n*This document has been generated by AI, therefore the information should not be considered valid.*\n"
+        ],
+        "metrics": [
+            {
+                "name": "Faithfulness",
+                "score": 0.6666666666666666,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Answer Relevancy",
+                "score": 0.6666666666666666,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Contextual Recall",
+                "score": 0.4,
+                "reason": null,
+                "passed": false
+            }
+        ]
+    },
+    {
+        "question": "According to the Q3 report, how much time were engineers previously losing to document search on the legacy BM25 system per day?",
+        "expected_output": "Engineers spent an average of 1.4 hours per day searching for technical documentation.",
+        "actual_output": "According to Fragment 1, before the implementation of Project Nexus, engineers spent an average of 1.4 hours per day searching for technical documentation using the legacy BM25-only system. This led to severe productivity bottlenecks.",
+        "retrieval_context": [
+            "# Project Nexus: Strategic Roadmap and Technical Blueprint\n\n**Date:** 03 de marzo de 2026\n**Author:** VP of Engineering\n**Document ID:** STRAT-NEXUS-001\n**Classification:** Confidential - Internal Architecture Draft\n\n## 1. Executive Summary & Vision\nProject Nexus represents the most significant overhaul to our internal knowledge infrastructure since 2018. Over the past five years, our workforce has relied on a legacy, strictly lexical search system based on BM25. While reliable, this legacy architecture failed to capture semantic intent, leading to severe productivity bottlenecks where engineers spent an average of 1.4 hours per day searching for technical documentation.\n\nProject Nexus is our strategic answer: a next-generation Semantic Search and Retrieval-Augmented Generation (RAG) ecosystem.",
+            "  - Testing the Nexus pipeline against the proprietary \"RTE-5\" (Reasoning and Truth Evaluation) benchmark. \n  - *Strategic Objective:* While corporate policies dictate a minimum 95% pass rate for production deployment, the engineering team has set an internal ambitious stretch goal for Project Nexus to achieve a **99% accuracy rate on the RTE-5 benchmark**.\n\n- **Q4 2026 (Oct–Dec): Enterprise Rollout.**\n  - Gradual phasing out of the legacy BM25-only system.\n  - Full deployment of Nexus to all 12,000 global employees.\n\n## 4. Resource Allocation and Extreme Constraints\nProject Nexus is deemed a critical infrastructure project, yet it operates under unprecedented constraints imposed by the Board of Directors following the global supply chain shifts of 2025.\n\n### 4.1 Financial Budget\nThe project has been allocated a strict hard cap budget of $2.5 million. This must cover localized hardware clustering, electricity costs during the R&D phase, and the salaries of the 14-person dedicated data engineering team.\n\n",
+            "# Hybrid-Neuro-Symbolic Architecture: Deep Dive & Cost Analysis\n\n**Date:** 22 de septiembre de 2026\n**Author:** Chief AI Architect\n**Document ID:** HNS-ARCH-001-PROPOSAL\n**Classification:** Confidential - Board Review Material \n\n## 1. Context and Problem Statement\nTraditional Retrieval-Augmented Generation (RAG) models rely on vector correlates (nearest-neighbor similarity) to fetch text and feed it to a Large Language Model. While mathematically efficient, this purely neural approach lacks deterministic logic. The Q3 Innovation Lab report proved that our current architecture (Project Nexus) hallucinates wildly when confronted by the aggressive content truncations executed by the older safety filters.\n\nTo overcome the hallucination issues present in purely correlational LLMs, the Advanced Systems Group proposes a radical shift: the \"Hybrid-Neuro-Symbolic\" architecture. \n\n## 2. Architecture Principles\n",
+            "# Innovation Lab: Q3 2026 Performance and Diagnostics Report\n\n**Date:** 15 de septiembre de 2026\n**Author:** Lead AI Researcher, Advanced Systems Group\n**Document ID:** ILAB-Q3-26-RPT\n**Classification:** Internal Only - Critical Systems Evaluation\n\n## 1. Introduction and Objectives\nDuring the third quarter of 2026 (July 1st through September 15th), the Innovation Lab conducted a rigorous, comprehensive testing phase on the release candidate of Project Nexus. The objective was to validate the complete Retrieval-Augmented Generation (RAG) pipeline running a proprietary fine-tuned 7B parameter base model integrated with our internal ChromaDB vector store and hybrid BM25 lexical fallback.\n\nThe testing protocol evaluated latency, semantic recall, context window deterioration, safety filter efficacy, and strict adherence to the Reasoning and Truth Evaluation (RTE-5) benchmark.\n\n## 2. Global Benchmark Performance\n",
+            "# Official Board Meeting Minutes: October 2026 Strategic Review\n\n**Date:** 10 de octubre de 2026, 09:00 AM - 14:30 PM\n**Participants:** \n- Chief Executive Officer (CEO)\n- Chief Financial Officer (CFO)\n- Vice President of Engineering (VP of Eng)\n- Chief AI Architect\n- Chief Ethics Officer (via written statement)\n**Location:** Main Conference Room, Executive Tower, Floor 42\n**Status:** Executed, Legally Binding Directives\n\n## Agenda Item 1: Q3 Innovation Lab Review and Project Nexus Autopsy\nThe meeting commenced with the VP of Engineering presenting the stark findings from the Q3 Innovation Lab report regarding Project Nexus. The core issue debated was the system's failure to achieve the mandated internal benchmark requirements.\n\n*VP of Engineering:* \"The model scored 88% on MMLU globally. It is mathematically brilliant. However, on our internal RTE-5 benchmark, it only yielded 92%."
+        ],
+        "metrics": [
+            {
+                "name": "Faithfulness",
+                "score": 1.0,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Answer Relevancy",
+                "score": 0.75,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Contextual Recall",
+                "score": 0.36363636363636365,
+                "reason": null,
+                "passed": false
+            }
+        ]
+    },
+    {
+        "question": "How long must the output logs of the Quantum-Ethic-Filter v2 be retained, and in what type of storage?",
+        "expected_output": "They must be retained for exactly 36 months in immutable WORM (Write Once Read Many) storage.",
+        "actual_output": "The system logs representing the output of the Quantum-Ethic-Filter v2 must be retained for exactly 36 months in immutable WORM (Write Once Read Many) storage.",
+        "retrieval_context": [
+            "The company has developed a proprietary benchmarking dataset known as \"RTE-5\" (Reasoning and Truth Evaluation). This suite tests models against our specific corporate nomenclature, internal codebases, financial projection heuristics, and ethics compliance logic.\n\n### 4.2 Production Thresholds\nAny new AI system, predictive model, or RAG (Retrieval-Augmented Generation) pipeline intended for internal or external production *must* achieve a minimum accuracy score of 95% on the RTE-5 benchmark.\nModels scoring below 95% cannot be pushed to production. This rule holds absolute regardless of the model's performance on public, external benchmarks (e.g., scoring 90% on MMLU or 85% on HumanEval does not exempt the model from the 95% RTE-5 requirement).\n\n## 5. Compliance Audits\nSystem logs representing the output of the Quantum-Ethic-Filter v2 must be retained for exactly 36 months in immutable WORM (Write Once Read Many) storage.",
+            " System Requirements and Filter Latency Conflicts\nThe primary bottleneck of this new architecture lies in the intersection of latency requirements and ethical compliance.\n\n### 3.1 The Latency Crisis\nTo provide a conversational UX, system latency must be maintained under an absolute maximum of 400ms per entire generation cycle. The symbolic graph traversal alone consumes an average of 140ms. \n\n### 3.2 Impossibility of Version 2 Filtering\nBecause of the tight 400ms latency budget, the Hybrid-Neuro-Symbolic system relies entirely on the legacy \"Quantum-Ethic-Filter v1.\" \nUpgrading to Version 2 of the filter—which employs deep neural inspection rather than simple regex—increases processing time by exactly 120ms per token generated. Given an average generation length of 150 tokens, a v2 filter would add 18,000ms (18 seconds) to the response time, completely destroying the 400ms requirement. Thus, the new architecture *must* use v1 to function.\n\n",
+            "### 2.2 The \"Quantum-Ethic-Filter\" Requirement\nAny LLM deployed with a parameter count exceeding 1 Billion *MUST* route all inference outputs through the \"Quantum-Ethic-Filter v2\" before the resulting generation is presented to the end-user or downstream application.\n\n**Crucial Technical Stipulation:** \n- The use of the legacy \"Quantum-Ethic-Filter v1\" is explicitly forbidden for models larger than 1 Billion parameters. Version 1 was deprecated on January 1st, 2026 due to repeated failures in catching zero-day PII (Personally Identifiable Information) extraction prompts.\n- Attempting to bypass the filter or utilize an outdated filter version (v1) to reduce latency constitutes a Level 1 policy violation.\n\n### 2.3 Hardware Constraints\nAll 7B model local deployments must be run on isolated corporate server nodes located in the restricted \"Blue Zone\" data centers.",
+            " Proposed Mitigation and Architectural Pivot\nBecause upgrading to the mandated \"Quantum-Ethic-Filter v2\" introduces severe latency overhead that the current RAG architecture cannot mathematically support without breaching the 300kW/h energy ceiling, we cannot simply swap the filters.\n\n",
+            "### Risk Matrix Reference\n| Risk Type | Policy Mitigation | Max Penalty |\n|-----------|-------------------|-------------|\n| PII Leakage | Quantum-Ethic-Filter v2 | Termination & Legal Action |\n| Latency Bypassing | Forced hardware auditing | Termination |\n| Unauthorized Cloud APIs | IP Network Blocking & $500 limit | Written Warning |\n| Hallucination in Prod | Minimum 95% RTE-5 Score | Demotion / Dismissal |\n\n---\n*This document has been generated by AI, therefore the information should not be considered valid.*\n"
+        ],
+        "metrics": [
+            {
+                "name": "Faithfulness",
+                "score": 0.6666666666666666,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Answer Relevancy",
+                "score": 0.6666666666666666,
+                "reason": null,
+                "passed": true
+            },
+            {
+                "name": "Contextual Recall",
+                "score": 0.3,
+                "reason": null,
+                "passed": false
+            }
+        ]
+    }
+]

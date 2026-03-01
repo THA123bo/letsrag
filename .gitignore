@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Vector DB
+chroma_db/
+
+# DeepEval
+.deepeval/
+
+# IDE
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Env
+.env
+*.env
+
+api.log
+
+eval/results.json
